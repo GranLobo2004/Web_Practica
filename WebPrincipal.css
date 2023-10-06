@@ -1,10 +1,15 @@
-h1 { 
-    text-align: center;
-}
 .product {
-    background-color: blue;
-    margin:10px;
+    
 }
 .col{
-    background-color: green;
+    
+}
+.row{
+
+}
+#titulo{
+    text-align: center;
+}
+header{
+
 }
