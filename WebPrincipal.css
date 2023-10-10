@@ -1,18 +1,39 @@
 .product {
-    
+    text-align: center;
 }
-.col{
-    
-}
-.row{
-
+.col-md-3{
+    background-color: rgb(40, 143, 238);
+    margin:10px;  
 }
 #titulo{
     text-align: center;
+    color:white;
 }
 header{
-
+    background-color: rgba(38, 0, 255, 0.484);
 }
 body{
-    margin: 30px;
+    margin-bottom: 20px;
+    background-image: url("background.png");
+    background-size: 100%;
+}
+.row{
+    justify-content: center;
+}
+button{
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 150px;
+    margin: 0 auto;
+}
+img{
+    margin:5px;
+}
+.nombre_producto{
+    font-weight: bold;
+    font-size: large;
+}
+.precio{
+    font-size:medium;
+    font-style: italic;
 }
