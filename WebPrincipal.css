@@ -7,15 +7,17 @@
 }
 #titulo{
     text-align: center;
-    color:white;
+    color:rgb(40, 143, 238);
+    text-shadow: 2px 2px white;
 }
 header{
     background-color: rgba(38, 0, 255, 0.484);
+    height: 55px;
 }
 body{
     margin-bottom: 20px;
     background-image: url("background.png");
-    background-size: 100%;
+    background-size: 105%;
 }
 .row{
     justify-content: center;
@@ -25,6 +27,8 @@ button{
     padding: 0.5rem 1rem;
     width: 150px;
     margin: 0 auto;
+    background-color: rgba(38, 0, 255, 0.755);
+    color: whitesmoke;
 }
 img{
     margin:5px;
@@ -36,4 +40,7 @@ img{
 .precio{
     font-size:medium;
     font-style: italic;
+}
+a{
+    text-decoration: none;
 }
