@@ -1,3 +1,26 @@
 h1 { 
     text-align: center;
 }
+
+body{
+
+    background-color: rgb(250, 247, 247);
+}
+.col-md-6{
+    background-color: rgb(222, 133, 133);
+    
+}
+
+#Titulo{
+    background-color: aqua;
+}
+.img-product{
+    width: 96%;
+    margin-top :5%;
+    margin-left:2%;
+    margin-right: 2%;    
+}
+.nombre-producto{
+    margin-top: 5%;
+    text-align: center;
+}
