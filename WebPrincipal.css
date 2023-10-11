@@ -16,6 +16,8 @@
     text-shadow: 2px 2px white;
 }
 header{
+    display: flex;
+    justify-content: center;
     background-color: rgba(38, 0, 255, 0.484);
     height: 55px;
 }
@@ -27,7 +29,7 @@ body{
 .row{
     justify-content: center;
 }
-button{
+.boton{
     margin: 10px;
     background-color: rgba(38, 0, 255, 0.755);
     color: whitesmoke;
@@ -51,4 +53,16 @@ a{
 .botones{
     display: flex;
     justify-content: center;
+}
+.desplegable{
+    color:rgb(40, 143, 238);
+    background-color: transparent;
+    border:none;
+}
+.dropdown-menu{
+    background-color:rgb(29, 97, 160);
+}
+.dropdown-item{
+    border-color: black;
+    color:whitesmoke
 }

@@ -9,11 +9,20 @@
     <! Por definir el contenido de la web.>
     <body>
         <header>
-            <h1 id="titulo">Mytems</h1>
+            <a href="WebPrincipal.html"><h1 id="titulo">Mytems</h1></a>
+            <div class="btn-group">
+                <button type="button" class="desplegable btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                <li><a class="dropdown-item" href="paginaDetalle.html">Pagina detalle </a> </li>
+                <li><a class="dropdown-item" href="NuevoProducto.html">Nuevo Producto </a> </li>
+                </ul>
+            </div>
         </header>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-lg-3 product" >
+                <div class="col-md-3 col-sm-3 col-lg-3 product">
                     <a href="paginaDetalle.html"><img class="img-fluid" alt="" src="https://i.blogs.es/59bfa7/nvidiageforcertx4090-ap/1366_2000.jpeg"/></a>
                     <p class="nombre_producto">RTX 4090</p>
                     <p class="precio">1500</p>
@@ -98,8 +107,8 @@
                 </div>
             </div>
         <div class="botones">
-            <a href="#titulo"><button>GO TO THE TOP</button> </a>
-            <a href="background.png"><button>NUEVO PRODUCTO</button> </a>
+            <a href="#titulo"><button type="button" class="boton btn btn-primary btn-md">GO TO THE TOP</button> </a>
+            <a href="NuevoProducto.html"><button type= "button" class="boton btn btn-primary btn-md">NUEVO PRODUCTO</button> </a>
         </div>
     </body>
 </html>
