@@ -20,11 +20,22 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navegacion">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navegacion" >                    <li class="nav-item">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navegacion" >                    
+                    
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-person"></i>Link</a>
+                        <a class="nav-link active" aria-current="page" >Ayuda</a>
+                    </li>
+                    <!--searchbar-->
+                    <form class="d-flex" role="search">
+                        <input id="buscador" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                    <!--searchbar end-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link<i class="bi bi-person"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -42,6 +53,7 @@
                         <i class="bi bi-person"></i>
                         prfole
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -110,11 +122,22 @@
             </div>
             <div class="col-lg-6">
                 <div>
-                    <h3 class="nombre-producto">Nombre del Producto</h3>
+                    <h3 class="nombre-producto">iPhone 11 128GB - Negro - Libre</h3>
                     <p>"Valoraciones del producto"<u>(opiniones)</u></p>
-
-
                     <h5>35.00 € </h5>
+                        <!--añadir cesta y like-->
+                        <div class="conteiner">
+                            <div class="row" >
+                                <div class="col-md-auto" >
+                                    <button id="cesta" type="button" class="btn btn-primary btn-lg btn-block">Comprar</button>
+                                    
+                                 </div>
+                                 <div class="col" >
+                                    <button type="button" class="btn btn-primary btn-lg btn-block"><i class="bi bi-bag-heart"></i></button>
+                                 </div>
+                            </div>
+
+                        </div>
 
                 </div>
 
@@ -122,9 +145,23 @@
         </div>
         <!--Caja de comentarios -->
         <div class="row">
-            <div class="col-md-4">
-hola
+            <div class="col-md-8">
+                   <h4>Comentarios y preguntas.</h4> 
+                    <div >
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Añade una reseña del producto</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="¿Que te ha gustado del producto?¿Recomendarias a este vendedor?..."></textarea>  
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                        
+                    </div>
             </div>
+
+            <div class="col-md-4">
+                hola
+            </div>
+            
+
         </div>
 
 
