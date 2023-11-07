@@ -3,28 +3,24 @@
 
 .container_propio{
 
-    border-radius: 8px;
-    background-color: rgb(34, 204, 181);
+    border-radius: 30px;
+    background-color: #636869;
+    
   
     
-
-
+    
 }
 .buton_agreg{
 
-
     display: block;
     margin: 0 auto;
-    
-
-   
-
+    margin-bottom: 30px;
 
    
 }
 
 
-.head{
+.cabecera{
 
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: bold;
