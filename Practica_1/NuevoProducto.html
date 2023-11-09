@@ -14,12 +14,66 @@
 
 
 <body style="background-color: #000000;">
-  <h1 class="cabecera">Crear Producto</h1>
-  <div class=" container container_propio" style="margin-bottom: 300px;">
-    <form col>
+  
+   <!--navbar top-->
+   <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+    <div class="container-fluid">
+        <a style="padding: 10px 5px 0px;" class="navbar-brand" href="#">
+            <p id="titulo">MYTEMS</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion"
+            aria-controls="navegacion" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navegacion">
+            <ul id="barracentro" class="navbar-nav mx-auto mt-2 mt-lg-0 navegacion ">
+
+                <li class="nav-item">
+                    <a  class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">Ayuda</a>
+                </li>
+                <!--searchbar-->
+                <form class="d-flex" role="search">
+                    <input class="form-control-sm" id="buscador" type="search"
+                        placeholder="¿Que tienes en mente...?" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <!--searchbar end-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link<i class="bi bi-person"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                        aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="https://www.backmarket.es/es-es">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <i class="bi bi-person"></i>
+                    prfole
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--navbar end-->
+
+  <div class=" container container_propio" style="margin-bottom: 300px; margin-top: 80px;">
+    <form>
       
-      <div class="form-outline" style="padding: 10px 50px 20px ">
-        <label class="textillo" for="Nombre">Nombre del producto</label>
+      <div class="form-outline" style="padding: 40px 50px 20px ">
+        <label class="textillo" for="Nombre">Nombre del producto:</label>
         <input type="name" class="form-control" placeholder="Nombre">
       </div>
 
@@ -36,7 +90,7 @@
 
       <div class="form-group" style="padding: 10px 50px 20px">
         <label class="textillo">Selecciona la categoría:</label>
-        <select class="form-control input_propio" id="exampleSelect">
+        <select class="form-control hhh" id="exampleSelect">
           <option></option>
           <option>Moviles y Tablets</option>
           <option>TV y Audio</option>
@@ -54,7 +108,7 @@
       </div>
 
       
-      <div class="textillo" style="padding: 10px 50px 10px ">Estado del producto:</div>
+      <div class="textillo" style="padding: 10px 50px 0px ">Estado del producto:</div>
 
 
       <div class="radiox">
@@ -76,7 +130,7 @@
 
 
 
-      <div class="form-group is-valid" style="padding: 10px 50px 20px">
+      <div class="form-group is-valid" style="padding: 10px 50px 80px">
         <label class="textillo" for="upload image">Suba una imagen</label>
         <input type="url" class="form-control-file is-valid yepa" id="image_upload">
       </div>
@@ -84,9 +138,9 @@
       </form>
 
       <div class="container container_botones">
-        <button type="Agregar" class="btn btn-primary buton_agreg">Agregar</button>
+        <button type="Agregar" class=" buton_agreg">Agregar</button>
         <a href="WebPrincipal.html">
-          <button class="btn btn-primary boton_cancelar">Cancelar</button>
+          <button class="boton_cancelar">Cancelar</button>
         </a>
       </div>
     
