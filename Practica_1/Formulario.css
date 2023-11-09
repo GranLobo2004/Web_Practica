@@ -10,11 +10,10 @@
     
     
 }
+
 .buton_agreg{
 
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    
 
    
 }
@@ -24,4 +23,16 @@
 
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: bold;
+}
+
+.boton_cancelar{
+
+    margin-left: 10px;
+
+}
+
+
+.container_botones{
+text-align: center;
+
 }
