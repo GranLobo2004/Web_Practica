@@ -1,15 +1,29 @@
+.radiox{
 
-
+    padding: 10px 70px 20px;
+    
+}
 
 .container_propio{
 
     border-radius: 30px;
-    background-color: #0ea8a8;
+    background-color: #9ebce0;
     
   
     
     
 }
+
+
+.textillo{
+
+    
+  color: #181717;
+  font-size: 15px;
+  font-weight: 700;
+  
+}
+
 
 .checkboxx{
 
@@ -19,12 +33,16 @@
 }
 
 
+.yepa{
 
+    border-radius: 5px;
+    border: none;
+}
 
 .cabecera{
 
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: bold;
+    
+    font-weight: sans-serif;
     color: #0ea8a8;
     margin-bottom: 50px;
 }
@@ -37,6 +55,12 @@
 
    
 }
+
+.buton_agreg:hover{
+
+    opacity: 0.5;
+    background-color: rgb(26, 202, 108);
+}
 .boton_cancelar{
 
     margin-left: 10px;
@@ -44,6 +68,13 @@
     background-color: rgb(158, 57, 71);
     border: none;
 
+}
+
+.boton_cancelar:hover{
+
+    background-color: rgb(158, 57, 71);
+    opacity: 0.5;
+    
 }
 
 

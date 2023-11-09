@@ -15,15 +15,16 @@
 
 <body style="background-color: #000000;">
   <h1 class="cabecera">Crear Producto</h1>
-  <div class="container container_propio" style="margin-bottom: 300px;">
-    <form>
+  <div class=" container container_propio" style="margin-bottom: 300px;">
+    <form col>
+      
       <div class="form-outline" style="padding: 10px 50px 20px ">
-        <label for="Nombre">Nombre del producto</label>
-        <input type="name" class="form-control input_propio" id="exampleInputEmail1" placeholder="Nombre">
+        <label class="textillo" for="Nombre">Nombre del producto</label>
+        <input type="name" class="form-control" placeholder="Nombre">
       </div>
 
       <div class="form-outline" style="padding: 10px 50px 20px ">
-        <label for="precio">Precio:</label>
+        <label class="textillo">Precio:</label>
         <div class="input-group">
           <input type="number" min="1" class="form-control input_propio" id="precio" placeholder="Introduzca el precio">
           <span class="input-group-text">
@@ -34,11 +35,10 @@
 
 
       <div class="form-group" style="padding: 10px 50px 20px">
-        <label>Selecciona la categoría:</label>
+        <label class="textillo">Selecciona la categoría:</label>
         <select class="form-control input_propio" id="exampleSelect">
           <option></option>
           <option>Moviles y Tablets</option>
-          <option>Elemento 2</option>
           <option>TV y Audio</option>
           <option>Portátiles</option>
           <option>Ordenadores</option>
@@ -48,56 +48,40 @@
 
       <div class="form-outline" style="padding: 10px 50px 20px ">
 
-        <label for="Nombre">Descripción del producto:</label>
+        <label class="textillo">Descripción del producto:</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 
       </div>
 
+      
+      <div class="textillo" style="padding: 10px 50px 10px ">Estado del producto:</div>
 
-      <p style="padding: 10px 50px 0px ">Estado del producto:</p>
 
-
-
-      <div class="checkboxx">
-        <div>
-          <input class="form-check-input" type="checkbox" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Nuevo
-          </label>
-          
-        </div>
-
-        <div>
-          <input class="form-check-input" type="checkbox" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Como nuevo
-          </label>
-        </div>
-
-        <div>
-          <input class="form-check-input" type="checkbox" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Usado
-          </label>
-
-        </div>
-        <div>
-          <input class="form-check-input" type="checkbox" id="defaultCheck1">
-          <label class="form-check-label" for="defaultCheck1">
-            Muy Usado
-          </label>
-
-        </div>
-
+      <div class="radiox">
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Nuevo
+        <label class="form-check-label" for="radio1"></label>
       </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Reacondicionado
+        <label class="form-check-label" for="radio2"></label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Segunda mano
+        <label class="form-check-label" for="radio1"></label>
+
+    </div>
+    </div>
+      
 
 
 
       <div class="form-group is-valid" style="padding: 10px 50px 20px">
-        <label for="upload image">Suba una imagen</label>
-        <input type="url" class="form-control-file is-valid" id="image_upload">
+        <label class="textillo" for="upload image">Suba una imagen</label>
+        <input type="url" class="form-control-file is-valid yepa" id="image_upload">
       </div>
 
+      </form>
 
       <div class="container container_botones">
         <button type="Agregar" class="btn btn-primary buton_agreg">Agregar</button>
@@ -105,10 +89,8 @@
           <button class="btn btn-primary boton_cancelar">Cancelar</button>
         </a>
       </div>
+    
 
-
-
-    </form>
   </div>
 
 </body>
