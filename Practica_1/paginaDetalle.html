@@ -12,27 +12,31 @@
 <body>
 
     <!--navbar top-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><p id="titulo">MYTEMS</p></a>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <p id="titulo">MYTEMS</p>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion"
                 aria-controls="navegacion" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navegacion">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navegacion" >                    
-                    
+                <ul id="barracentro" class="navbar-nav mx-auto mt-2 mt-lg-0 navegacion ">
+
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" >Ayuda</a>
+                        <a class="nav-link active" aria-current="page">Ayuda</a>
                     </li>
                     <!--searchbar-->
                     <form class="d-flex" role="search">
-                        <input id="buscador" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control-sm" id="buscador" type="search"
+                            placeholder="¿Que tienes en mente...?" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
+                    </form>
                     <!--searchbar end-->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link<i class="bi bi-person"></i></a>
@@ -46,14 +50,15 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdown03">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="https://www.backmarket.es/es-es">Something else here</a></li>
+                            <li><a class="dropdown-item" href="https://www.backmarket.es/es-es">Something else here</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <i class="bi bi-person"></i>
                         prfole
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -125,42 +130,139 @@
                     <h3 class="nombre-producto">iPhone 11 128GB - Negro - Libre</h3>
                     <p>"Valoraciones del producto"<u>(opiniones)</u></p>
                     <h5>35.00 € </h5>
-                        <!--añadir cesta y like-->
-                        <div class="conteiner">
-                            <div class="row" >
-                                <div class="col-md-auto" >
-                                    <button id="cesta" type="button" class="btn btn-primary btn-lg btn-block">Comprar</button>
-                                    
-                                 </div>
-                                 <div class="col" >
-                                    <button type="button" class="btn btn-primary btn-lg btn-block"><i class="bi bi-bag-heart"></i></button>
-                                 </div>
-                            </div>
+                    <!--añadir cesta y like-->
+                    <div class="conteiner">
+                        <div class="row">
+                            <div class="col-md-auto">
+                                <button id="cesta" type="button"
+                                    class="btn btn-primary btn-lg btn-block">Comprar</button>
 
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-primary btn-lg btn-block"><i
+                                        class="bi bi-bag-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Color y demas-->
+                    <div class="container">
+                        <br>
+                        <div class = "d-flex justify-content-start">
+                            <h6>Color</h6>
                         </div>
 
+                        <div class = "conteiner">
+                            <div class = "row">
+                                <div type="checkbox" class="col-sm">
+                                    <button type="button" class="buttonColor">
+                                        verde
+                                    </button>
+                                </div>
+                                <div class="col-sm" >
+                                    <button type="button" class="buttonColor">
+                                        Azul
+                                    </button>
+                                </div>
+                                <div class="col-sm">
+                                    <button type="button" class="buttonColor">
+                                        Rojo
+                                    </button>
+                                </div>
+                                
+                            </div>
+
+                            <div class = "row">
+                                <div class="col-sm">
+                                    <button type="button" class="buttonColor">
+                                        Blanco
+                                    </button>
+                                </div>
+                                <div class="col-sm">
+                                    <button type="button" class="buttonColor">
+                                        Negro
+                                    </button>
+                                </div>
+                                <div class="col-sm">
+                                    <button type="button" class="buttonColor">
+                                        Rosa
+                                    </button>
+                                </div>
+                                
+                            </div>
+<br>
+                        </div>
+                    </div>
                 </div>
+                
+                <h4>Acerca de </h4>
+                <!--Accordion-->
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <!--item3-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                          Detalles del producto
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                          <strong>Ficha tecnica del producto.</strong> Se muestra de forma predeterminada, hasta que el complemento Collapse agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+                        </div>
+                      </div>
+                    </div>
+                    <!--item3-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                          Servicios incluidos
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                          <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribr nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+                        </div>
+                      </div>
+                    </div>
+                    <!--item3-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Vendedor y preguntas frecuentes
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                          <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!----------------------fin del accordion------------------->
+
+
 
             </div>
         </div>
         <!--Caja de comentarios -->
         <div class="row">
             <div class="col-md-8">
-                   <h4>Comentarios y preguntas.</h4> 
-                    <div >
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Añade una reseña del producto</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="¿Que te ha gustado del producto?¿Recomendarias a este vendedor?..."></textarea>  
-                        </div>
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Enviar</button>
-                        
+                <h4>Comentarios y preguntas.</h4>
+                <div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Añade una reseña del
+                            producto</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="¿Que te ha gustado del producto?¿Recomendarias a este vendedor?..."></textarea>
                     </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Enviar</button>
+
+                </div>
             </div>
 
             <div class="col-md-4">
                 hola
             </div>
-            
+
 
         </div>
 
