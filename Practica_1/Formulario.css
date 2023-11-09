@@ -4,30 +4,45 @@
 .container_propio{
 
     border-radius: 30px;
-    background-color: #636868;
+    background-color: #0ea8a8;
     
   
     
     
 }
 
-.buton_agreg{
+.checkboxx{
 
+    padding: 0px 80px 20px;
     
 
-   
 }
+
+
 
 
 .cabecera{
 
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: bold;
+    color: #0ea8a8;
+    margin-bottom: 50px;
 }
 
+.buton_agreg{
+
+    margin-bottom: 40px;
+    background-color: rgb(26, 202, 108);
+    border: none;
+
+   
+}
 .boton_cancelar{
 
     margin-left: 10px;
+    margin-bottom: 40px;
+    background-color: rgb(158, 57, 71);
+    border: none;
 
 }
 
@@ -36,3 +51,4 @@
 text-align: center;
 
 }
+
