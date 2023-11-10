@@ -13,7 +13,7 @@ body {
 }
 
 .col-md-8 {
-    background-color: rgb(164, 222, 133);
+    background-color: rgb(255, 255, 255);
     padding-top: 1%;
     padding-bottom: 1%;
 }
@@ -34,7 +34,7 @@ body {
 .img-product {
     width: 100%;
     height: 100%;
-    ;
+    
 
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 .navegacion {
-    text-align: center;
+    text-align: left !important;
     margin-left: auto;
     justify-content: left !important;
 }
@@ -74,12 +74,16 @@ body {
 }
 
 #barracentro {
-    justify-content: left !important;
+    text-align: left;
 }
 
 .nav-item {
     margin-left: 10px;
     margin-right: 10px;
+    
+}
+.nav-icon{
+    width: 330px;
 }
 
 .buttonColor {
@@ -107,9 +111,13 @@ body {
 }
 
 #BotonEditaryBorrar{
-    text-align: center;
+   text-align: center;
    padding-top: 18px;
    padding-left: 20px;
    justify-content: space-between;
    
+}
+#logoNav{
+    width:150px;
+    height:70px;
 }
