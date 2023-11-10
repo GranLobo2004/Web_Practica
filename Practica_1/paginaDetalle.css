@@ -106,3 +106,10 @@ body {
     background-color: lightgray; /* Cambia el color a verde cuando el mouse está sobre el botón */
 }
 
+#BotonEditaryBorrar{
+    text-align: center;
+   padding-top: 18px;
+   padding-left: 20px;
+   justify-content: space-between;
+   
+}
