@@ -1,6 +1,28 @@
+.card {
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
 h1 {
     text-align: center;
     margin: auto;
+}
+
+#idComentario {
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+#imagenPerfilComentario {
+    height: 40px;
+}
+
+#estado {
+    margin-top: 5%;
+    color: rgb(149, 145, 145);
 }
 
 body {
@@ -19,7 +41,7 @@ body {
 }
 
 .col-md-4 {
-    background-color: rgb(20, 49, 155);
+    background-color: rgb(255, 255, 255);
 }
 
 #Titulo {
@@ -34,12 +56,12 @@ body {
 .img-product {
     width: 100%;
     height: 100%;
-    
+
 
 }
 
 .nombre-producto {
-    margin-top: 5%;
+    margin-top: 5px;
     text-align: left;
 }
 
@@ -80,9 +102,10 @@ body {
 .nav-item {
     margin-left: 10px;
     margin-right: 10px;
-    
+
 }
-.nav-icon{
+
+.nav-icon {
     width: 330px;
 }
 
@@ -92,7 +115,7 @@ body {
     border: 1.5px solid black;
     color: rgb(11, 11, 11);
     padding: 15px 32px;
- 
+
     text-decoration: none;
     display: flex;
     font-size: 16px;
@@ -101,23 +124,36 @@ body {
     border-radius: 12px;
     width: 150px;
     height: 40px;
-    align-items:center;
+    align-items: center;
     text-align: left;
-    
+
 
 }
-.buttonColor:hover  {
-    background-color: lightgray; /* Cambia el color a verde cuando el mouse está sobre el botón */
+
+.buttonColor:hover {
+    background-color: lightgray;
+    /* Cambia el color a verde cuando el mouse está sobre el botón */
 }
 
-#BotonEditaryBorrar{
-   text-align: center;
-   padding-top: 18px;
-   padding-left: 20px;
-   justify-content: space-between;
-   
+#BotonEditaryBorrar {
+    text-align: center;
+    padding-top: 18px;
+    padding-left: 20px;
+    justify-content: space-between;
+
 }
-#logoNav{
-    width:150px;
-    height:70px;
+
+#logoNav {
+    width: 150px;
+    height: 70px;
+}
+#nombrePerfilComentario{
+    margin-bottom: 0;
+}
+
+#FilaPerfilComentario{
+    padding-bottom: 10px;
+}
+#grayText{
+    color:rgb(149, 145, 145);
 }

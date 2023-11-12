@@ -5,21 +5,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link type="text/css" rel="stylesheet" href="paginaDetalle.css" />
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 
 <body>
-    
-    
+
+
     <!--navbar top-->
     <nav class="navbar navbar-expand-md navbar-dark bg-black" aria-label="Third navbar example">
         <div class="container-fluid">
             <a class="navbar-brand" href="WebPrincipal.html">
-                <img  id="logoNav" src="Logo.png" alt="">
+                <img id="logoNav" src="Logo.png" alt="">
             </a>
-            
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion"
                 aria-controls="navegacion" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,15 +47,14 @@
         </div>
     </nav>
     <!--navbar end-->
-
-
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 ">
-                <Div>
-                    <!--Inicio del carrucel de imagenes-->
-                    <Div>
 
+        <div class="row">
+
+            <div class="col-lg-6 ">
+                <div>
+                    <!--Inicio del carrucel de imagenes-->
+                    <div>
                         <div class="bd-example">
                             <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
@@ -109,101 +108,167 @@
 
             </div>
             <div class="col-lg-6">
-                <div>
-                    <h3 class="nombre-producto">iPhone 11 128GB - Negro - Libre</h3>
-                    <p>"Valoraciones del producto"<a href="#opiniones"><u>(opiniones)</u></a></p>
-                    <h5>35.00 € </h5>
-                    <!--añadir cesta y like-->
-                    <div class="conteiner">
-                        <div class="row">
-                            <div class="col-md-auto">
-                                <button id="cesta" type="button"
-                                    class="btn btn-primary btn-lg btn-block">Comprar</button>
 
+                <div class="container">
+                    <h6 id="estado">Nuevo</h6>
+                    <h2 class="nombre-producto">iPhone 11 128GB - Negro - Libre</h3>
+                        <p>"Valoraciones del producto"<a href="#opiniones"><u>(opiniones)</u></a></p>
+                        <p id="categoria"> Celulares y SmartPhones</p>
+                        <h5>335.00 € </h5>
+                        <!--añadir cesta y like-->
+                        <div class="conteiner">
+                            <div class="row">
+                                <div class="col-md-auto">
+                                    <button id="cesta" type="button"
+                                        class="btn btn-primary btn-lg btn-block">Comprar</button>
+
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-primary btn-lg btn-block"><i
+                                            class="bi bi-bag-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr /><!--barra espaciadora-->
+                        <h5>Acerca de </h5>
+                        <!--Accordion-->
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <!--item3-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseOne">
+                                        Detalles del producto
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        <strong>Ficha tecnica del producto.</strong> Se muestra de forma
+                                        predeterminada, hasta que el complemento Collapse agrega las clases
+                                        apropiadas que usamos para diseñar cada elemento. Estas clases controlan la
+                                        apariencia general, así como la visualización y ocultación a través de
+                                        transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado
+                                        o sobrescribir nuestras variables predeterminadas. También vale la pena
+                                        señalar que casi cualquier HTML puede ir dentro de
+                                        <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+                                    </div>
+                                </div>
+                            </div>
+                            <!--item3-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo">
+                                        Servicios incluidos
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingTwo">
+                                    <div class="accordion-body">
+                                        <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está
+                                        oculto de manera predeterminada, hasta que el complemento Collapse agregue
+                                        las clases apropiadas que usamos para diseñar cada elemento. Estas clases
+                                        controlan la apariencia general, así como la visualización y ocultación a
+                                        través de transiciones CSS. Puedes modificar cualquiera de esto con CSS
+                                        personalizado o sobrescribr nuestras variables predeterminadas. También vale
+                                        la pena señalar que casi cualquier HTML puede ir dentro de
+                                        <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+                                    </div>
+                                </div>
+                            </div>
+                            <!--item3-->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                        Preguntas frecuentes
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está
+                                        oculto de manera predeterminada, hasta que el complemento Collapse agregue
+                                        las clases apropiadas que usamos para diseñar cada elemento. Estas clases
+                                        controlan la apariencia general, así como la visualización y ocultación a
+                                        través de transiciones CSS. Puedes modificar cualquiera de esto con CSS
+                                        personalizado o sobrescribir nuestras variables predeterminadas. También
+                                        vale la pena señalar que casi cualquier HTML puede ir dentro de
+                                        <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!----------------------fin del accordion------------------->
+                </div>
+                <div id="BotonEditaryBorrar">
+                    <button type="button" class="btn btn-success">Editar</button>
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                </div>
+
+            </div>
+            <!--Caja de comentarios -->
+            <div class="row">
+                <div class="col-md-8">
+
+                    <h4 id="opiniones">Comentarios y preguntas.</h4>
+                    <div>
+                        <div class="mb-3">
+                            <p>Como te sientes respecto al producto</p>
+
+                            <label for="exampleFormControlTextarea1" class="form-label">Añade una reseña del
+                                producto</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="¿Que te ha gustado del producto?¿Recomendarias a este vendedor?..."></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Enviar</button>
+
+                    </div>
+                    <hr /><!--barra espaciadora-->
+
+                    <div><!--caja ejemplo de 1 comentario-->
+                        <div id="FilaPerfilComentario" class="row">
+                            <div class="col-md-auto idComentario">
+                                <img id="imagenPerfilComentario" src="imagenPrefilComentario.png" alt="">
                             </div>
                             <div class="col">
-                                <button type="button" class="btn btn-primary btn-lg btn-block"><i
-                                        class="bi bi-bag-heart"></i>
-                                </button>
+                                <p id="nombrePerfilComentario" ><strong>Jaden Smith</strong></p>
+                                <p id="grayText"> 12 de Nov de 2023</p>
                             </div>
+                            <!--estrellitas de valoracion-->
+                            <div class="col">
+
+                            </div>
+
                         </div>
-                    </div>
-                <h4>Acerca de </h4>
-                <!--Accordion-->
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <!--item3-->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                          Detalles del producto
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                        <div class="accordion-body">
-                          <strong>Ficha tecnica del producto.</strong> Se muestra de forma predeterminada, hasta que el complemento Collapse agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
-                        </div>
-                      </div>
-                    </div>
-                    <!--item3-->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                          Servicios incluidos
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-                          <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribr nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
-                        </div>
-                      </div>
-                    </div>
-                    <!--item3-->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                            Vendedor y preguntas frecuentes
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                        <div class="accordion-body">
-                          <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
-                        </div>
-                      </div>
-                    </div>
+
+                        <div>
+                            <p><strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está
+                                oculto de manera predeterminada, hasta que el complemento Collapse agregue
+                                las clases apropiadas que usamos para diseñar cada elemento. Estas clases
+                                controlan la apariencia general, así como la visualización y ocultación a
+                                través de transiciones CSS. Puedes modificar cualquiera de esto con CSS
+                                personalizado o sobrescribr nuestras variables predeterminadas. También vale
+                                la pena señalar que casi cualquier HTML puede ir dentro de</strong></p>
+                            </div>
+
+                    </div><!--Fin de caja ejemplo de 1 comentario-->
                 </div>
-                <!----------------------fin del accordion------------------->
-            </div>
-            <div id="BotonEditaryBorrar">
-                <button type="button" class="btn btn-success">Editar</button>
-                <button type="button" class="btn btn-danger">Borrar</button>
-            </div>
-            
-        </div> 
-        <!--Caja de comentarios -->
-        <div class="row">
-            <div class="col-md-8">
-                <h4 id="opiniones">Comentarios y preguntas.</h4>
-                <div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Añade una reseña del
-                            producto</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                            placeholder="¿Que te ha gustado del producto?¿Recomendarias a este vendedor?..."></textarea>
-                    </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Enviar</button>
 
+                <div class="col-md-4">
+                    hola
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                hola
-            </div>
 
+            </div>
 
         </div>
-
-
-
 
     </div>
 
