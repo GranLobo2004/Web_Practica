@@ -157,3 +157,10 @@ body {
 #grayText{
     color:rgb(149, 145, 145);
 }
+#infoSellerCard{
+    width: 94%;
+    height: 70%;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+
