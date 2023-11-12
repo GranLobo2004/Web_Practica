@@ -4,11 +4,17 @@
     
 }
 
+
+#separacion{
+    padding: 30px 50px 20px
+}
+
 .container_propio{
 
     border-radius: 30px;
     background-color: #a5bcd8;
-    
+    margin-bottom: 300px;
+    margin-top: 80px;
   
     
     
@@ -21,13 +27,17 @@
     margin-right: 15px;
 
 }
+#buscador.active{
+
+   
+}
 
 
 .input_propio{
    
 }
 
-.textillo{
+.texto{
 
     
   color: #181717;
@@ -123,4 +133,6 @@
 text-align: center;
 
 }
+
+
 
