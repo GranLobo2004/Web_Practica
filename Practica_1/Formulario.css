@@ -12,7 +12,7 @@
 .container_propio{
 
     border-radius: 30px;
-    background-color: #a5bcd8;
+    background-color: rgb(127, 207, 181);
     margin-bottom: 300px;
     margin-top: 80px;
   
@@ -55,10 +55,19 @@
 }
 
 
-.yepa{
+.form-control-file{
 
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
+    margin-left: 12px;
+}
+
+.link-imagen{
+
+    border-radius: 10px;
+    border: none;
+    margin-left: 8px;
+    width: 500px;
 }
 
 .cabecera{
