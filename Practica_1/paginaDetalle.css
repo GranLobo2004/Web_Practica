@@ -142,10 +142,16 @@ body {
     justify-content: space-between;
 
 }
+#buscador{
+
+    border-radius: 12px;
+    border: none;
+    margin-right: 15px;}
 
 #logoNav {
-    width: 150px;
+    width: px;
     height: 70px;
+    margin-left: 20px;
 }
 #nombrePerfilComentario{
     margin-bottom: 0;
