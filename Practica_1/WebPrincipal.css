@@ -1,100 +1,31 @@
+/* css del body */
+body{
+    margin-bottom: 20px;
+    background-color:white;
+    background-size: 105%;
+}
+/*estilo de cada celda con producto*/
 .product {
     display: block;
     justify-content: center;
-    text-align: center;
-    
+    text-align: center; 
 }
 .col-md-3{
-    background-color: rgb(40, 143, 238);
-    margin:10px;
+    background-color: #0fffe9;
+    margin:1.5%;
     border-radius: 15px;
     border-color: white;
-    box-shadow: 5px 5px rgb(107, 175, 240);
+    box-shadow: 5px 5px #c6ff76;
 }
+/*animacion de los productos*/
 .col-md-3:hover{
     width: 27%;
-    background-color:rgb(40, 63, 238);
-    box-shadow: 5px 5px rgb(107, 131, 240);
-    animation-name: rotacion;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
+    background-color:#0dd6c5;
+    box-shadow: 5px 5px #88bd3d;
 }
-@keyframes rotacion {
-    0%{
-        width:25%;
-    }
-    100%{
-        width: 27%;
-    }
-}
-#titulo{
-    text-align: center;
-    text-shadow: 2px 2px white;
-    opacity: 0;
-    animation: entradaTitulo 2s ease-in-out forwards;
-    animation-delay: 0.5s;
-} 
-@keyframes entradaTitulo {
-    0% {
-      opacity: 0;
-      transform: translatex(-100px); /* Puedes ajustar la posición de entrada */
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-header a{
-    animation-name:cambiocolor;
-    animation-duration: 7.5s;
-    animation-delay: 3s;
-    animation-iteration-count: infinite;
-}
-@keyframes cambiocolor {
-    0%{
-        color:rgb(40, 47, 238);
-        opacity: 1;
-    }
-    25%{
-        opacity: 0.5;
-    }
-    50%{
-        color:rgb(0, 179, 255);
-        opacity: 1;
-    }
-    75%{
-        opacity: 0.5;
-    }
-    100%{
-        color:rgb(40, 47, 238);;
-        opacity: 1;
-    }
-}
-header{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(38, 0, 255, 0.484);
-    height: 55px;
-}
-body{
-    margin-bottom: 20px;
-    background-image: url("background.png");
-    background-size: 105%;
-}
-.row{
-    justify-content: center;
-}
-.boton{
-    margin: 10px;
-    background-color: rgba(38, 0, 255, 0.755);
-    color: whitesmoke;
-}
-.botones{
-    display: flex;
-    justify-content: center;
-}
-img{
+.imagen_producto{
     margin-top: 10px;
+    height: 200px;
 }
 .nombre_producto{
     font-weight: bold;
@@ -106,32 +37,85 @@ img{
     font-style: italic;
     text-decoration: underline;
 }
+/*alineacion de filas*/
+.row{
+    justify-content: center;
+}
+/*botones del final de la página*/
+.boton{
+    margin: 10px;
+    background-color: #0fffe9;
+    color: #c6ff76;
+}
+.boton:hover{
+    background-color:#03beaf;
+    color:#aefb41;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+}
+/* cualquier hipervinculo ya sea boton o texto*/
 a{
     text-decoration: none;
 }
-.desplegable{
-    color:rgb(40, 143, 238);
-    background-color: transparent;
-    border:none;
-    opacity: 0;
-    animation: entradadesplegable 2s ease-in-out forwards;
-    animation-delay: 0.5s;
-} 
-@keyframes entradadesplegable {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px); /* Puedes ajustar la posición de entrada */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* css del header */
+/* barra superior */
+#barracentro {
+    text-align: left;
 }
+.navegacion {
+    text-align: left !important;
+    margin-left: auto;
+    justify-content: left !important;
+}
+.nav-item {
+    margin-right:10px;
+    margin-left:10px;
+}
+.nav-icon {
+    width: 330px;
+}
+.buttonColor {
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid black;
+    color: rgb(11, 11, 11);
+    padding: 15px 32px;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    text-align: left;
+}
+.buttonColor:hover {
+    background-color: lightgray;
+}
+#buscador{
+    width: 500px;
+    border-radius: 12px;
+    border: none;
+    margin-right: 15px;
+}
+#logoNav {
+    width: auto;
+    height: 70px;
+    margin-left: 20px;
+}
+/* flecha desplegable con menu*/
 .dropdown-menu{
-    background-color:rgb(24, 114, 199);
+    background-color:#0fffe9;
 }
 .dropdown-item{
-    border-color: black;
-    color:whitesmoke
+    border-color:#c6ff76;
+    color:black;
 }
-
+.desplegable{
+    background-color: transparent;
+    color:#0fffe9;
+    border:none;
+} 
