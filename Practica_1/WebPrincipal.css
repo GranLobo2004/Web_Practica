@@ -5,6 +5,11 @@ body{
     background-size: 105%;
 }
 /*estilo de cada celda con producto*/
+
+.img-fluid{
+
+    padding: 0px 0px 20px;
+}
 .product {
     display: block;
     justify-content: center;
