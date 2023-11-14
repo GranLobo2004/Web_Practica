@@ -15,12 +15,13 @@ body{
     margin:1.5%;
     border-radius: 15px;
     border-color: white;
-    box-shadow: 5px 5px #c6ff76;
+    box-shadow: 5px 5px #000000;
 }
 /*animacion de los productos*/
 .col-md-3:hover{
     background-color:#0dd6c5;
-    box-shadow: 5px 5px #88bd3d;
+    box-shadow: 5px 5px #000000;
+    opacity: 0.7;
 }
 .imagen_producto{
     margin-top: 10px;
