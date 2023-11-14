@@ -1,6 +1,6 @@
 .radiox{
 
-    padding: 0px 80px 10px;
+    padding: 0px 50px 10px;
     
 }
 
@@ -16,10 +16,7 @@
     padding: 30px 50px 20px
 }
 
-.separacion-form{
 
-    padding: 10px 50px 20px;
-}
 
 .container_form{
 
@@ -69,6 +66,7 @@
     border-radius: 20px;
     border: none;
     margin-left: 12px;
+    margin-bottom: 40px;
     
 }
     
@@ -100,6 +98,11 @@
     
     
     
+}
+
+.row-g3{
+
+    padding: 10px 10px 10px;
 }
 .boton_cancelar{
 
@@ -135,6 +138,7 @@
 .container_botones{
 
 text-align: center;
+padding: 20px 20 px 20px;
 
 }
 
