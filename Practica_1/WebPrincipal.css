@@ -19,7 +19,6 @@ body{
 }
 /*animacion de los productos*/
 .col-md-3:hover{
-    width: 27%;
     background-color:#0dd6c5;
     box-shadow: 5px 5px #88bd3d;
 }
@@ -45,7 +44,7 @@ body{
 .boton{
     margin: 10px;
     background-color: #0fffe9;
-    color: #c6ff76;
+    color: #000000;
 }
 .boton:hover{
     background-color:#03beaf;
