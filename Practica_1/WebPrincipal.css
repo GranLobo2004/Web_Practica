@@ -25,7 +25,7 @@ body{
 }
 .imagen_producto{
     margin-top: 10px;
-    height: 200px;
+    height: 70%;
 }
 .nombre_producto{
     font-weight: bold;
