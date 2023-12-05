@@ -27,24 +27,24 @@ class MapaProductos {
     };
 };
 
-mp = new MapaProductos();
+let mp = new MapaProductos();
 
 function loadproductos(mp){
-    producto1 = new Producto('Airpods 3ª Generacion',[],160,'','','');
-    producto2 = new Producto('Beats Studio 3',[],430,'','','');
-    producto3 = new Producto('TV QLED 50" Samsung',[],500,'','','');
-    producto4 = new Producto('XBoxSeriesX',[],468,'','','');
-    producto5 = new Producto('iphone 13 Pro 256GB',[],632.30,'','','');
-    producto6 = new Producto('Apple iPad mini (2021)',[],650,'','','');
-    producto7 = new Producto('PlayStation 5',[],529,'','','');
-    producto8 = new Producto('SmartWatch Series x',[],79.90,'','','');
-    producto9 = new Producto('Echo Dot',[],64.99,'','','');
-    producto10 = new Producto('Apple Macbook pro',[],1409.90,'','','');
-    producto11 = new Producto('Portátil HP',[],419.99,'','','');
-    producto12 = new Producto('PC Gaming MSI',[],799.99,'','','');
-    producto13 = new Producto('Portátil Gaming Asus',[],619,'','','');
-    producto14 = new Producto('Pc Sobremesa',[],307,'','','');
-    producto15 = new Producto('Surface i7.11370H',[],1500,'','','');
+    let producto1 = new Producto('Airpods 3ª Generacion',['https://www.urjc.es/intranet-urjc'],160,'sf','sdf','asd');
+    let producto2 = new Producto('Beats Studio 3',[],430,'','','');
+    let producto3 = new Producto('TV QLED 50" Samsung',[],500,'','','');
+    let producto4 = new Producto('XBoxSeriesX',[],468,'','','');
+    let producto5 = new Producto('iphone 13 Pro 256GB',[],632.30,'','','');
+    let producto6 = new Producto('Apple iPad mini (2021)',[],650,'','','');
+    let producto7 = new Producto('PlayStation 5',[],529,'','','');
+    let producto8 = new Producto('SmartWatch Series x',[],79.90,'','','');
+    let producto9 = new Producto('Echo Dot',[],64.99,'','','');
+    let producto10 = new Producto('Apple Macbook pro',[],1409.90,'','','');
+    let producto11 = new Producto('Portátil HP',[],419.99,'','','');
+    let producto12 = new Producto('PC Gaming MSI',[],799.99,'','','');
+    let producto13 = new Producto('Portátil Gaming Asus',[],619,'','','');
+    let producto14 = new Producto('Pc Sobremesa',[],307,'','','');
+    let producto15 = new Producto('Surface i7.11370H',[],1500,'','','');
     mp.addproducto(producto1);
     mp.addproducto(producto2);
     mp.addproducto(producto3);

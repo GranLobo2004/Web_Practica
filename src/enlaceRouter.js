@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
 
-    res.render('WebPrincipal', { 
+    res.render('index', { 
         producto: mapaproducto.inicializemapa(),
     });
 });
