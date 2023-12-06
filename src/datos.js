@@ -1,3 +1,4 @@
+let mapa;
 function cargarproductos(){
     let producto1 ={nombre:'Airpods 3ª Generacion',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto2 ={nombre:'Beats Studio 3',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
@@ -6,7 +7,7 @@ function cargarproductos(){
     let producto5 ={nombre:'iphone 13 Pro 256GB',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto6 ={nombre:'Apple iPad mini (2021)',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto7 ={nombre:'PlayStation 5',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
-    let producto8 ={nombre:'SmartWatch Series x',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
+    let producto8 ={nombre:'SmartWatch Series x',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg','https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto9 ={nombre:'Echo Dot',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto10 ={nombre:'Apple Macbook pro',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto11 ={nombre:'Portátil HP',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
@@ -14,7 +15,7 @@ function cargarproductos(){
     let producto13 ={nombre:'Portátil Gaming Asus',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto14 ={nombre:'Pc Sobremesa',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto15 ={nombre:'Surface i7.11370H',imagenes:['https://www.bizneo.com/blog/wp-content/uploads/2019/05/pruebas-psicometricas-810x455.jpg'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
-    let mapa = new Map();
+    mapa = new Map();
     mapa.set(producto1.nombre,producto1);
     mapa.set(producto2.nombre,producto2);
     mapa.set(producto3.nombre,producto3);
@@ -35,7 +36,7 @@ function cargarproductos(){
 
 export function showProductos(){
     let mapa=cargarproductos();
-    let productos=[...mapa.values()];
+    let productos= Array.from (mapa.values());//convertirmos el mapa en un array para iterarlo en mustache
     return productos;
 };
 
