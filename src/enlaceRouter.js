@@ -1,19 +1,19 @@
 import express from 'express';
-import * as mapaproducto from './Elementos.js';
+import * as productos from './datos.js';
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
 
     res.render('index', { 
-        producto: mapaproducto.inicializemapa(),
+        producto: productos.showProductos(),
     });
 });
 
-router.get('/enlace/:nenlace', (req, res) => {
+router.get('/post/:id', (req, res) => {
 
-    res.render('paginaDetalle', {
-        nenlace: req.params.nenlace,
-    });
-})
+    let producto = produtos.getProducto(req.params.id);
+
+    res.render('paginaDetalle', { producto });
+});
 export default router;
