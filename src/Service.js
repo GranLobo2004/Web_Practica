@@ -1,6 +1,6 @@
 let mapa;
 function cargarproductos(){
-    let producto1 ={nombre:'Airpods 3ª Generacion',imagenes:['/images/imagesProductos/airpods.png'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
+    let producto1 ={nombre:'Airpods 3ª Generacion',imagenes:['/images/imagesProductos/airpods.png', '/images/imagesProductos/beats_studio.png','/images/imagesProductos/beats_studio.png'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto2 ={nombre:'Beats Studio 3',imagenes:['/images/imagesProductos/beats_studio.png'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto3 ={nombre:'TV QLED 50" Samsung',imagenes:['/images/imagesProductos/TV_Samsung.png'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
     let producto4 ={nombre:'XBoxSeriesX',imagenes:['/images/imagesProductos/Xbox.png'],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola'} ;
