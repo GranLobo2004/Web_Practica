@@ -10,10 +10,11 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/post/:id', (req, res) => {
+router.get('/paginaDetalle/:nombre', (req, res) => {
 
-    let producto = produtos.getProducto(req.params.id);
+    let producto = productos.getProducto(req.params.nombre);
 
     res.render('paginaDetalle', { producto });
 });
 export default router;
+

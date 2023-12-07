@@ -47,3 +47,7 @@ export function getProducto(nombre){
 export function deleteProducto(nombre){
     mapa.delete(nombre);
 };
+
+export function addProducto(producto){
+    mapa.set(producto.nombre,producto);
+};
