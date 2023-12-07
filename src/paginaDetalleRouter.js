@@ -1,14 +1,7 @@
 import express from 'express';
-import * as productos from './datos.js';
+import * as productos from './Service.js';
 
 const router = express.Router();
-
-router.get('/', (req, res) => {
-
-    res.render('index', { 
-        producto: productos.showProductos(),
-    });
-});
 
 router.get('/paginaDetalle/:nombre', (req, res) => {
 
@@ -17,4 +10,3 @@ router.get('/paginaDetalle/:nombre', (req, res) => {
     res.render('paginaDetalle', { producto });
 });
 export default router;
-
