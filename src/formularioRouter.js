@@ -11,11 +11,11 @@ router.get('/Formulario',(req,res) => {
 
 router.post('/producto/new',(req,res) => {
 
-    let {product_name,price, seller, category, description, services, estado_producto, imagen1, imagen2, imagen3} = req.params.body;
-    let imagenes = [imagen1,imagen2,imagen3];
-    let producto = {product_name,price,seller,category,description,services,estado_producto,imagenes};
+    let {nombre,precio, vendedor, categoria, descripcion, servicios, estado, imagen1, imagen2, imagen3} = req.body;
+    let imagenes = [{imagen: imagen1},{imagen: imagen2},{imagen: imagen3}]
+    let producto = {nombre,precio,vendedor,categoria,descripcion,servicios,estado,imagenes};
     productos.addProducto(producto);
-    res.render('paginaDetalle', productos.getProducto(product_name));
+    res.render('paginaDetalle', productos.getProducto(nombre));
 
 });
 

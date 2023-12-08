@@ -10,7 +10,7 @@ router.get('/paginaDetalle/:nombre', (req, res) => {
     res.render('paginaDetalle', { producto });
 });
 
-router.post('/producto/new',(req,res) => {
+router.post('/producto/neww',(req,res) => {
 
     let {usuario,texto} = req.params.body;
     let comentario ={usuario,texto};
