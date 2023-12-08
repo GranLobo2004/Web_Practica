@@ -1,5 +1,5 @@
 import express from 'express';
-import * as productos from './Serivice.js';
+import * as productos from './Service.js';
 
 const router = express.Router();
 router.get('/Formulario',(req,res) => {
@@ -8,4 +8,5 @@ router.get('/Formulario',(req,res) => {
 
     res.render('Formulario');
 });
+
  export default router;
