@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/../public'));
 
 app.use('/', indexRouter);
-app.use('/',paginaDetalleRouter);
-app.use('/',formularioRouter);
+app.use('/', paginaDetalleRouter);
+app.use('/', formularioRouter);
 
 app.listen(3000, () => console.log('Listening on port 3000!'));

@@ -1,22 +1,24 @@
-
+let mapa = new Map();
 function cargarproductos(){
-
-    let producto1 ={nombre:'Airpods 3ª Generacion',imagenes:['/images/imagesProductos/airpods.png', '/images/imagesProductos/beats_studio.png','/images/imagesProductos/iphone.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto2 ={nombre:'Beats Studio 3',imagenes:['/images/imagesProductos/beats_studio.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto3 ={nombre:'TV QLED 50" Samsung',imagenes:['/images/imagesProductos/TV_Samsung.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto4 ={nombre:'XBoxSeriesX',imagenes:['/images/imagesProductos/Xbox.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto5 ={nombre:'iphone 13 Pro 256GB',imagenes:['/images/imagesProductos/iphone.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto6 ={nombre:'Apple iPad mini (2021)',imagenes:['/images/imagesProductos/ipad_mini.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto7 ={nombre:'PlayStation 5',imagenes:['/images/imagesProductos/PS5.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto8 ={nombre:'SmartWatch Series x',imagenes:['/images/imagesProductos/SmartWatch.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto9 ={nombre:'Echo Dot',imagenes:['/images/imagesProductos/alexa.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto10 ={nombre:'Apple Macbook pro',imagenes:['/images/imagesProductos/Mackbook.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto11 ={nombre:'Portátil HP',imagenes:['/images/imagesProductos/portatil_oficina.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto12 ={nombre:'PC Gaming MSI',imagenes:['/images/imagesProductos/ordenador_gaming.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto13 ={nombre:'Portátil Gaming Asus',imagenes:['/images/imagesProductos/portatil_gaming.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto14 ={nombre:'Pc Sobremesa',imagenes:['/images/imagesProductos/ordenador_oficina.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let producto15 ={nombre:'Surface i7.11370H',imagenes:['/images/imagesProductos/surface.png'],precio:160,descripcion:'ramona',servicios:'Envio gratis',estado:'Nuevo'} ;
-    let mapa = new Map();
+    let comentario= {usuario:'Leo', texto:'Es un producto muy fiable, buena calidad-precio, lo único de lo que me puedo quejar son de los materiales de construccion.'};
+    let comentarios = [];
+    comentarios.unshift(comentario)
+    let producto1 ={nombre:'Airpods 3ª Generacion',imagenes:[{imagen:'/images/imagesProductos/airpods.png'}, {imagen:'/images/imagesProductos/beats_studio.png'},{imagen:'/images/imagesProductos/beats_studio.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto2 ={nombre:'Beats Studio 3',imagenes:[{imagen:'/images/imagesProductos/beats_studio.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto3 ={nombre:'TV QLED 50" Samsung',imagenes:[{imagen:'/images/imagesProductos/TV_Samsung.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto4 ={nombre:'XBoxSeriesX',imagenes:[{imagen:'/images/imagesProductos/Xbox.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto5 ={nombre:'iphone 13 Pro 256GB',imagenes:[{imagen:'/images/imagesProductos/iphone.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto6 ={nombre:'Apple iPad mini (2021)',imagenes:[{imagen:'/images/imagesProductos/ipad_mini.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto7 ={nombre:'PlayStation 5',imagenes:[{imagen:'/images/imagesProductos/PS5.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto8 ={nombre:'SmartWatch Series x',imagenes:[{imagen:'/images/imagesProductos/SmartWatch.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto9 ={nombre:'Echo Dot',imagenes:[{imagen:'/images/imagesProductos/alexa.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto10 ={nombre:'Apple Macbook pro',imagenes:[{imagen:'/images/imagesProductos/Mackbook.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto11 ={nombre:'Portátil HP',imagenes:[{imagen:'/images/imagesProductos/portatil_oficina.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto12 ={nombre:'PC Gaming MSI',imagenes:[{imagen:'/images/imagesProductos/ordenador_gaming.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto13 ={nombre:'Portátil Gaming Asus',imagenes:[{imagen:'/images/imagesProductos/portatil_gaming.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto14 ={nombre:'Pc Sobremesa',imagenes:[{imagen:'/images/imagesProductos/ordenador_oficina.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios,} ;
+    let producto15 ={nombre:'Surface i7.11370H',imagenes:[{imagen:'/images/imagesProductos/surface.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    mapa = new Map();
     mapa.set(producto1.nombre,producto1);
     mapa.set(producto2.nombre,producto2);
     mapa.set(producto3.nombre,producto3);
@@ -52,4 +54,8 @@ export function deleteProducto(nombre){
 
 export function addProducto(producto){
     mapa.set(producto.nombre,producto);
+};
+
+export function addComentario(comentario,producto){
+    producto.comentarios.unshift(comentario);
 };
