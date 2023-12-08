@@ -13,7 +13,7 @@
         <header>
             <nav  class="navbar navbar-expand-md navbar-dark bg-black" aria-label="Third navbar example">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="./WebPrincipal.html">
+                    <a class="navbar-brand" href="/">
                         <img id="logoNav" src="../images/MytemsLogo.png" alt="">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion" aria-controls="navegacion" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,8 @@
                                     <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a class="dropdown-item" href="/Formulario">Nuevo Producto </a> </li>
+                                        <li><a class="dropdown-item" href="paginaDetalle">Pagina detalle </a> </li>
+                                        <li><a class="dropdown-item" href="Formulario">Nuevo Producto </a> </li>
                                     </ul>
                                 </div>
                             </li>
@@ -54,7 +55,7 @@
             <div class="row"> <!--fila de productos-->
                 {{#producto}}
                 <div class="col-md-3 col-sm-8 col-lg-3 product"> <!--caja con el producto-->
-                    <a href="paginaDetalle/{{nombre}}"><img class="img-fluid imagen_producto" alt="" src="{{imagenes.0}}"/></a>
+                    <a href="paginaDetalle/{{nombre}}"><img class="img-fluid imagen_producto" alt="" src="{{imagenes.0.imagen}}"/></a>
                     <p class="nombre_producto">{{nombre}}</p>
                     <p class="precio">{{precio}}€</p>
                 </div>
