@@ -56,6 +56,7 @@
                 <div>
                     <!--Inicio del carrucel de imagenes-->
                     <div>
+                        
                         <div class="bd-example">
                             <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
@@ -68,11 +69,12 @@
                                 </div>
                                 
                                 <!--Contenido delcarrusel-->
+                                
                                 <div class="carousel-inner active">
                                     
                                     <div class="carousel-item active">
                                         <img class="img-product"
-                                            src="{{imagenes.0.imagen}}"
+                                            src="{{imagenprincipal}}"
                                             alt="Descripción de la imagen">
                                     </div>
                                     {{#imagenes}}
@@ -82,7 +84,10 @@
                                             alt="Descripción de la imagen">
                                     </div>
                                     {{/imagenes}}
+                                    {{^imagenes}}
+                                    {{/imagenes}}
                                 </div>
+                                
                                 <!--Fin de contenido del carrusel-->
 
                                 <!--botones del carrusel-->
@@ -98,6 +103,7 @@
                                 </button>
                             </div>
                         </div>
+
                     </Div>
 
                 </Div>
