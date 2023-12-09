@@ -6,9 +6,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
 
     productos.loadProductos();
-    res.render('index', { 
-        producto: productos.showProductos(),
-    });
+    res.render('index', { producto: productos.showProductos()});
 });
 
 
