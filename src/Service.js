@@ -62,4 +62,6 @@ export function addComentario(usuario, texto, producto){
     let comentario= {usuario:usuario, fecha: {dia:dia.getDate(), mes:mes.getMonth()+1, anyo:anyo.getFullYear()}, texto:texto};
     producto.comentarios.unshift(comentario);
     mapa.set(producto.nombre,producto);
+    let productoprueba = mapa.get('Surface i7.11370H');
+    console.log(productoprueba.comentarios);
 };

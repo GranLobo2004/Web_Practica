@@ -9,7 +9,9 @@ router.get('/', (req, res) => {
     res.render('index', { producto: productos.showProductos()});
 });
 
-
+router.get('/index', (req, res) => {
+    res.render('index', { producto: productos.showProductos()});
+});
 
 
 export default router;

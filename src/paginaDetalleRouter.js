@@ -6,7 +6,6 @@ const router = express.Router();
 router.get('/paginaDetalle/:nombre', (req, res) => {
 
     let producto = productos.getProducto(req.params.nombre);
-    console.log(producto.comentarios);
     if (typeof producto === "undefined"){
         let errormessage = 'El producto que buscas no existe.'
         res.render('error',{errormessage})
