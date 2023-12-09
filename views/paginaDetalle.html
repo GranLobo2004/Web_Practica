@@ -47,10 +47,11 @@
         </div>
     </nav>
     <!--navbar end-->
+    {{#producto}}
     <div class="container">
 
         <div class="row">
-            {{#producto}}
+            
             <div class="col-lg-6 ">
                 <div>
                     <!--Inicio del carrucel de imagenes-->
@@ -132,7 +133,7 @@
                             <div class="row">
 
                                 <div class="col-md-auto">
-                                    <img id="imagenPerfilComentario" src="/Web_Practica/images/Garantia.png" alt="">
+                                    <img id="imagenPerfilComentario" src="../images/Garantia.png" alt="">
                                 </div>
 
                                 <div class="col">
@@ -143,7 +144,7 @@
                             <div class="row">
 
                                 <div class="col-md-auto">
-                                    <img id="imagenPerfilComentario" src="/Web_Practica/images/BestSeller.png" alt="">
+                                    <img id="imagenPerfilComentario" src="../images/BestSeller.png" alt="">
                                 </div>
 
                                 <div class="col">
@@ -249,7 +250,7 @@
                     <div><!--caja ejemplo de 1 comentario-->
                         <div id="FilaPerfilComentario" class="row">
                             <div class="col-md-auto idComentario">
-                                <img id="imagenPerfilComentario" src="/Web_Practica/images/imagenPrefilComentario.png" alt="">
+                                <img id="imagenPerfilComentario" src="../images/imagenPrefilComentario.png" alt="">
                             </div>
                             <div class="col">
                                 <p id="nombrePerfilComentario"><strong>{{usuario}}</strong></p>
@@ -266,8 +267,9 @@
                             <p><strong>Acerca de {{nombre}}</strong> 
                                 {{texto}}</p>
                         </div>
-                        {{/comentarios}}
+                        
                     </div><!--Fin de caja ejemplo de 1 comentario-->
+                    {{/comentarios}}
                 </div>
                 <!--Informacion del vendedor-->
                 <div class="col-md-4">
@@ -277,7 +279,7 @@
                             <div class="row">
 
                                 <div class="col-md-auto">
-                                    <img id="imagenPerfilComentario" src="/Web_Practica/images/imagenPrefilComentario.png" alt="">
+                                    <img id="imagenPerfilComentario" src="../images/imagenPrefilComentario.png" alt="">
                                 </div>
 
                                 <div class="col">
@@ -285,7 +287,6 @@
 
                                 </div>
                             </div>
-                            {{/producto}}
 
 
                             <!--metodos de pago-->
@@ -332,6 +333,7 @@
         </div>
 
     </div>
+    {{/producto}}
 
 
 </body>
