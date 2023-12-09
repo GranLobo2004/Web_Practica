@@ -13,7 +13,7 @@ router.get('/paginaDetalle/:nombre', (req, res) => {
 router.post('/paginaDetalle/:nombre/comentario/new',(req,res) => {
 
     let {usuario,texto}= req.body;
-    let comentario = {usuario,texto};
+    let comentario = {usuario:usuario,texto:texto};
     let producto = productos.getProducto(req.params.nombre);
     productos.addComentario(comentario,producto);
     res.render('paginaDetalle',{producto});

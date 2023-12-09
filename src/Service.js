@@ -3,7 +3,7 @@ export function loadProductos(){
     let comentario= {usuario:'Leo', texto:'Es un producto muy fiable, buena calidad-precio, lo único de lo que me puedo quejar son de los materiales de construccion.'};
     let comentarios = [];
     comentarios.unshift(comentario)
-    let producto1 ={nombre:'Airpods 3ª Generacion',imagenes:[{imagen:'/images/imagesProductos/airpods.png'}, {imagen:'/images/imagesProductos/beats_studio.png'},{imagen:'/images/imagesProductos/beats_studio.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
+    let producto1 ={nombre:'Airpods 3ª Generacion',imagenes:[{imagen:'/images/imagesProductos/airpods.png'}, {imagen:'/images/imagesProductos/beats_studio.png'},{imagen:'/images/imagesProductos/beats_studio.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios: comentarios} ;
     let producto2 ={nombre:'Beats Studio 3',imagenes:[{imagen:'/images/imagesProductos/beats_studio.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
     let producto3 ={nombre:'TV QLED 50" Samsung',imagenes:[{imagen:'/images/imagesProductos/TV_Samsung.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
     let producto4 ={nombre:'XBoxSeriesX',imagenes:[{imagen:'/images/imagesProductos/Xbox.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
@@ -53,5 +53,5 @@ export function addProducto(producto){
 };
 
 export function addComentario(comentario,producto){
-    producto.comentarios.unshift(comentario);
+    producto.comentarios.unshift(comentarios);
 };
