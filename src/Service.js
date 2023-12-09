@@ -1,5 +1,5 @@
 let mapa = new Map();
-function cargarproductos(){
+export function loadProductos(){
     let comentario= {usuario:'Leo', texto:'Es un producto muy fiable, buena calidad-precio, lo único de lo que me puedo quejar son de los materiales de construccion.'};
     let comentarios = [];
     comentarios.unshift(comentario)
@@ -18,7 +18,6 @@ function cargarproductos(){
     let producto13 ={nombre:'Portátil Gaming Asus',imagenes:[{imagen:'/images/imagesProductos/portatil_gaming.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
     let producto14 ={nombre:'Pc Sobremesa',imagenes:[{imagen:'/images/imagesProductos/ordenador_oficina.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios,} ;
     let producto15 ={nombre:'Surface i7.11370H',imagenes:[{imagen:'/images/imagesProductos/surface.png'}],precio:160,descripcion:'ramona',servicios:'adios',estado:'hola', vendedor:'Rosa Melano', comentarios:comentarios} ;
-    mapa = new Map();
     mapa.set(producto1.nombre,producto1);
     mapa.set(producto2.nombre,producto2);
     mapa.set(producto3.nombre,producto3);
@@ -34,17 +33,14 @@ function cargarproductos(){
     mapa.set(producto13.nombre,producto13);
     mapa.set(producto14.nombre,producto14);
     mapa.set(producto15.nombre,producto15);
-    return mapa;
 };
 
 export function showProductos(){
-    let mapa=cargarproductos();
     let productos= Array.from (mapa.values());//convertirmos el mapa en un array para iterarlo en mustache
     return productos;
 };
 
 export function getProducto(nombre){
-    let mapa=cargarproductos();
     return mapa.get(nombre);
 };
 

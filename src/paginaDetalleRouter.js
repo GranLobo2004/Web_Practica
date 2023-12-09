@@ -7,16 +7,21 @@ router.get('/paginaDetalle/:nombre', (req, res) => {
 
     let producto = productos.getProducto(req.params.nombre);
 
-    res.render('paginaDetalle', { producto });
+    res.render('paginaDetalle', {producto} );
 });
 
-router.post('/producto/neww',(req,res) => {
+router.post('/paginaDetalle/:nombre/comentario/new',(req,res) => {
 
-    let {usuario,texto} = req.params.body;
-    let comentario ={usuario,texto};
+    let {usuario,texto}= req.body;
+    let comentario = {usuario,texto};
     let producto = productos.getProducto(req.params.nombre);
     productos.addComentario(comentario,producto);
-    res.render('paginaDetalle', producto);
-
+    res.render('paginaDetalle',{producto});
 });
+
+router.post('/deleteProducto',(req,res) =>{
+    productos.deleteProducto(req.params.nombre);
+    res.redirect('/');
+});
+
 export default router;
