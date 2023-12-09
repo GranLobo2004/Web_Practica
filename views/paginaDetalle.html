@@ -218,7 +218,7 @@
 
                 <div id="BotonEditaryBorrar">
                     <button type="button" class="btn btn-success buttonManejo">Editar</button>
-                    <form  method="post" action="/paginaDetalle/{{nombre}}/delete">
+                    <form  method="post" action="/{{nombre}}">
                         <button type="button submit" class="btn btn-danger buttonManejo">Borrar</button>
                     </form>
                     <a href="/" >
@@ -233,7 +233,7 @@
 
                     <h4 id="opiniones">Comentarios y preguntas.</h4>
                     <div>
-                        <form action = "/paginaDetalle/{{nombre}}/comentarios/new" method = "post">
+                        <form action = "/paginaDetalle/{{nombre}}" method = "post">
                             <div class="mb-3">
                                 <p>Como te sientes respecto al producto</p>
                                 <label class="texto" for="Usuario">Nombre del usuario:</label>
@@ -269,6 +269,9 @@
                         </div>
                         
                     </div><!--Fin de caja ejemplo de 1 comentario-->
+                    {{/comentarios}}
+                    {{^comentarios}}
+                    <p>No hay comentarios sobre este producto</p>
                     {{/comentarios}}
                 </div>
                 <!--Informacion del vendedor-->

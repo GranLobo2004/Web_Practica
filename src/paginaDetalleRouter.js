@@ -6,6 +6,7 @@ const router = express.Router();
 router.get('/paginaDetalle/:nombre', (req, res) => {
 
     let producto = productos.getProducto(req.params.nombre);
+    console.log(producto.comentarios);
     if (typeof producto === "undefined"){
         let errormessage = 'El producto que buscas no existe.'
         res.render('error',{errormessage})
@@ -14,7 +15,7 @@ router.get('/paginaDetalle/:nombre', (req, res) => {
         res.render('paginaDetalle', {producto} );
 });
 
-router.post('/paginaDetalle/:nombre/comentarios/new',(req,res) => {
+router.post('/paginaDetalle/:nombre',(req,res) => {
 
     let {usuario,texto}= req.body;
     let producto = productos.getProducto(req.params.nombre);
@@ -22,9 +23,9 @@ router.post('/paginaDetalle/:nombre/comentarios/new',(req,res) => {
     res.render('paginaDetalle', {producto});
 });
 
-router.post('/paginaDetalle/:nombre/delete',(req,res) =>{
+router.post('/:nombre',(req,res) =>{
     productos.deleteProducto(req.params.nombre);
-    res.redirect('/');
+    res.render('index',{producto: productos.showProductos()});
 });
 
 export default router;

@@ -55,10 +55,11 @@ export function addProducto(producto){
     mapa.set(producto.nombre,producto);
 };
 
-export function addComentario(usuario,texto, producto){
+export function addComentario(usuario, texto, producto){
     let dia = new Date();
     let mes = new Date();
     let anyo = new Date();
     let comentario= {usuario:usuario, fecha: {dia:dia.getDate(), mes:mes.getMonth()+1, anyo:anyo.getFullYear()}, texto:texto};
     producto.comentarios.unshift(comentario);
+    mapa.set(producto.nombre,producto);
 };
