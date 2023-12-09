@@ -15,7 +15,7 @@ router.post('/producto/new',(req,res) => {
     let imagenes = [{imagen: imagen1},{imagen: imagen2},{imagen: imagen3}]
     let producto = {nombre,precio,vendedor,categoria,descripcion,servicios,estado,imagenes};
     productos.addProducto(producto);
-    res.render('paginaDetalle', productos.getProducto(nombre));
+    res.render('paginaDetalle', {producto});
 
 });
 
