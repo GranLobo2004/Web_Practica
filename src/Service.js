@@ -57,3 +57,28 @@ export function addComentario(usuario, texto, productomod){
     productomod.comentarios.unshift(newcomentario);
     mapa.set(productomod.nombre,productomod);
 };
+
+export function editProducto(nombre, nuevoProducto) {
+    if (mapa.has(nombre)) {
+      let productoAntiguo = mapa.get(nombre);
+  
+      // Actualiza los campos necesarios con el nuevo producto
+      productoAntiguo.nombre = nuevoProducto.nombre;
+      productoAntiguo.vendedor = nuevoProducto.vendedor;
+      productoAntiguo.precio = nuevoProducto.precio;
+      productoAntiguo.categoria = nuevoProducto.categoria;
+      productoAntiguo.descripcion = nuevoProducto.descripcion;
+      productoAntiguo.servicios = nuevoProducto.servicios;
+      productoAntiguo.estado = nuevoProducto.estado;
+      productoAntiguo.vendedor = nuevoProducto.vendedor;
+      productoAntiguo.comentarios = nuevoProducto.comentarios;
+  
+      // Guarda el producto actualizado en el mapa
+      mapa.delete(nombre)
+      mapa.set(productoAntiguo.nombre, productoAntiguo);
+  
+      return productoAntiguo.nombre ; // Indica que la edición fue exitosa
+    } else {
+      return false; // Indica que el producto no fue encontrado
+    }
+  }
