@@ -20,30 +20,39 @@ router.post('/producto/new', (req, res) => {
     res.render('paginaDetalle', { producto });
 });
 
-router.get('/paginaDetalle/edit/:nombre', (req, res) => {
-    let producto = productos.getProducto(req.params.nombre);
-    res.render('Formulario', { producto })
-});
-
 router.post('/paginaDetalle/edit/:nombre', (req, res) => {
-    const ValorNuevoProducto = {
-        nombre: req.body.nombre,
-        vendedor: req.body.vendedor,
-        precio: req.body.precio,
-        categoria: req.body.categoria,
-        descripcion: req.body.descripcion,
-        servicios: req.body.servicios,
-        estado: req.body.estado,
-        imagen1: req.body.imagen1,
-        imagen2: req.body.imagen2,
-        imagen3: req.body.imagen3,
+    let producto = productos.getProducto(req.params.nombre);
+    console.log(producto.categoria)
+    producto.categoria={moviles:false, TV:false, Portatiles:false, Ordenadores:false, Consolas:false, Audio:false, Relojes:false, Otros:false};
+    switch (producto.categoria){
+        case "Móviles y Tablets":{
+            producto.categoria.moviles=true;
+        };
+        case "TV":{
+            producto.categoria.TV=true;
+        };
+        case "Portatiles":{
+            producto.categoria.Portatiles=true;
+        };
+        case "Ordenadores":{
+            producto.categoria.Ordenadores=true;
+        };
+        case "Consolas":{
+            producto.categoria.Consolas=true;
+        };
+        case "Audio":{
+            producto.categoria.Audio=true;
+        };
+        case "Relojes Inteligentes":{
+            producto.categoria.Relojes=true;
+        };
+        case "Otros":{
+            producto.categoria.Otros=true;
+        };
     };
-
-    let exitoEdicion = productos.editProducto(req.params.nombre, ValorNuevoProducto);
-    let producto = productos.getProducto(exitoEdicion)
-    // Si la edición es exitosa, redirige a la página de detalles del producto actualizado
-    res.redirect(`/paginaDetalle/${producto}`);
-
+    console.log(producto.categoria);
+    productos.addProducto(producto);
+    res.render('Formulario', { producto })
 });
     
 
