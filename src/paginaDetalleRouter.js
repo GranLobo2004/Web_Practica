@@ -27,4 +27,9 @@ router.post('/:nombre',(req,res) =>{
     res.render('index',{producto: productos.showProductos()});
 });
 
+router.post('/edit/:nombre',(req,res)=>{
+    let producto = productos.getProducto(req.params);
+    res.render('Formulario',{producto});
+});
+
 export default router;
