@@ -141,8 +141,10 @@
     <button class="boton_cancelar" >Cancelar</button>
   </a>
   {{/producto}}
+
+
   {{#producto}}
-  <form class="row g-3 m-4" action="/producto/new" method="post">
+  <form class="row g-3 m-4" action="/paginaDetalle/{{nombre}}" method="post">
     <div class="col-md-3">
       <label class="texto" for="nombre">Nombre Producto:</label>
       <input name="nombre" class="form-control" placeholder="Nombre" value="{{nombre}}">

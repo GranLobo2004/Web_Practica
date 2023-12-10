@@ -19,5 +19,9 @@ router.post('/producto/new',(req,res) => {
     productos.addProducto(producto);
     res.render('paginaDetalle', {producto});
 });
+router.post('/paginaDetalle/edit/:nombre',(req,res)=>{
+    let producto = productos.getProducto(req.params.nombre);
+    res.render('Formulario',{producto});
+});
 
  export default router;
