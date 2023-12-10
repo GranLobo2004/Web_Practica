@@ -22,9 +22,9 @@ router.post('/producto/new', (req, res) => {
 
 router.post('/paginaDetalle/edit/:nombre', (req, res) => {
     let producto = productos.getProducto(req.params.nombre);
-    console.log(producto.categoria)
+    let categoria = producto.categoria;
     producto.categoria={moviles:false, TV:false, Portatiles:false, Ordenadores:false, Consolas:false, Audio:false, Relojes:false, Otros:false};
-    switch (producto.categoria){
+    switch (categoria){
         case "Móviles y Tablets":{
             producto.categoria.moviles=true;
         };
