@@ -54,194 +54,392 @@
 
 
 <div class="container container_form">
-  {{^producto}}
-  <form class="row g-3 m-4" action="/producto/new" method="post">
-    {{#errors}}
-    <div class="alert alert-danger" role="alert">
-      {{msg}}
-    </div>
-    {{/errors}}
-    <div class="col-md-3">
-      <label class="texto" for="nombre">Nombre Producto:</label>
-      <input name="nombre" class="form-control" placeholder="Nombre">
-    </div>
-
-    <div class="col-md-3 ">
-      <label class="texto" for="nombre-Vendedor">Nombre Vendedor:</label>
-      <input name="vendedor" class="form-control" placeholder="vendedor">
-    </div>
-
-    <div class="col-md-3">
-      <label class="texto">Precio:</label>
-      <div class="input-group">
-        <input type="number" min="1" class="form-control" id="precioo" name="precio" placeholder="Introduzca el precio">
-        <span class="input-group-text">
-          <i class="fas fa-euro-sign"></i>
-        </span>
+  {{^errores}}
+    {{^producto}}
+    <form class="row g-3 m-4" action="/producto/new" method="post">
+      {{#errors}}
+      <div class="alert alert-danger" role="alert">
+        {{msg}}
       </div>
-    </div>
+      {{/errors}}
+      <div class="col-md-3">
+        <label class="texto" for="nombre">Nombre Producto:</label>
+        <input name="nombre" class="form-control" placeholder="Nombre">
+      </div>
 
-    <div class="col-md-3">
-      <label class="texto">Categoría:</label>
-      <select name="categoria" class="form-control" >
-        <option></option>
-        <option>Móviles y Tablets</option>
-        <option>TV</option>
-        <option>Portátiles</option>
-        <option>Ordenadores</option>
-        <option>Consolas</option>
-        <option>Audio</option>
-        <option>Relojes Inteligentes</option>
-        <option>Otros</option>
-      </select>
-    </div>
+      <div class="col-md-3 ">
+        <label class="texto" for="nombre-Vendedor">Nombre Vendedor:</label>
+        <input name="vendedor" class="form-control" placeholder="vendedor">
+      </div>
 
-    <div>
-      <label class="texto">Descripción del producto:</label>
-      <textarea name="descripcion" placeholder="Inserte la descripción" class="form-control" rows="3"></textarea>
-    </div>
+      <div class="col-md-3">
+        <label class="texto">Precio:</label>
+        <div class="input-group">
+          <input type="number" min="1" class="form-control" id="precioo" name="precio" placeholder="Introduzca el precio">
+          <span class="input-group-text">
+            <i class="fas fa-euro-sign"></i>
+          </span>
+        </div>
+      </div>
 
-    <div>
-      <label class="texto">Servicios incluidos:</label>
-      <textarea name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2"></textarea>
-    </div>
+      <div class="col-md-3">
+        <label class="texto">Categoría:</label>
+        <select name="categoria" class="form-control" >
+          <option></option>
+          <option>Móviles y Tablets</option>
+          <option>TV</option>
+          <option>Portátiles</option>
+          <option>Ordenadores</option>
+          <option>Consolas</option>
+          <option>Audio</option>
+          <option>Relojes Inteligentes</option>
+          <option>Otros</option>
+        </select>
+      </div>
 
-    <div class="texto">Estado del producto:</div>
+      <div>
+        <label class="texto">Descripción del producto:</label>
+        <textarea name="descripcion" placeholder="Inserte la descripción" class="form-control" rows="3"></textarea>
+      </div>
 
-    
-      <div class="radio-form">
-        <div class="form-check">
+      <div>
+        <label class="texto">Servicios incluidos:</label>
+        <textarea name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2"></textarea>
+      </div>
+
+      <div class="texto">Estado del producto:</div>
+
+      
+        <div class="radio-form">
+          <div class="form-check">
+              <div>
+            <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo">Nuevo
+            <label class="form-check-label" for="radio1"></label>
+            </div>
             <div>
-          <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo">Nuevo
-          <label class="form-check-label" for="radio1"></label>
+              <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado">Reacondicionado
+              <label class="form-check-label" for="radio2"></label>
           </div>
           <div>
-            <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado">Reacondicionado
-            <label class="form-check-label" for="radio2"></label>
+              <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano">Segunda mano
+              <label class="form-check-label" for="radio3"></label>
+          </div>
+          </div>
         </div>
-        <div>
-            <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano">Segunda mano
-            <label class="form-check-label" for="radio3"></label>
-        </div>
-        </div>
-      </div>
 
-    
-    
-
-
-    <div>
-      <label class="texto" for="upload image">Suba una imagen</label>
-      <input placeholder=" URL" type="url" class="form-control-file" name="imagen1">
-      <input placeholder=" URL" type="url" class="form-control-file" name="imagen2">
-      <input placeholder=" URL" type="url" class="form-control-file" name="imagen3">
-    </div>
-
-   
-      <button class="buton_agreg" type="submit" value="save">Agregar</button>
       
-  </form>
-
-  <div class="container_botones"></div>
-  <a href="/">
-    <button class="boton_cancelar" >Cancelar</button>
-  </a>
-  {{/producto}}
+      
 
 
-  {{#producto}}
-  <form class="row g-3 m-4" action="/producto/edited/{{id}}" method="post">
-    {{#errors}}
-    <div class="alert alert-danger" role="alert">
-      {{msg}}
-    </div>
-    {{/errors}}
-    <div class="col-md-3">
-      <label class="texto" for="nombre">Nombre Producto:</label>
-      <input name="nombre" class="form-control" placeholder="Nombre" value="{{nombre}}">
-    </div>
-
-    <div class="col-md-3 ">
-      <label class="texto" for="nombre-Vendedor">Nombre Vendedor:</label>
-      <input name="vendedor" class="form-control" placeholder="vendedor" value="{{vendedor}}">
-    </div>
-
-    <div class="col-md-3">
-      <label class="texto">Precio:</label>
-      <div class="input-group">
-        <input type="number" min="1" class="form-control" id="precioo" name="precio" placeholder="Introduzca el precio" value="{{precio}}">
-        <span class="input-group-text">
-          <i class="fas fa-euro-sign"></i>
-        </span>
+      <div>
+        <label class="texto" for="upload image">Suba una imagen</label>
+        <input placeholder=" URL" type="url" class="form-control-file" name="imagen1">
+        <input placeholder=" URL" type="url" class="form-control-file" name="imagen2">
+        <input placeholder=" URL" type="url" class="form-control-file" name="imagen3">
       </div>
-    </div>
-
-    <div class="col-md-3">
-      <label class="texto">Categoría:</label>
-      <select name="categoria" class="form-control">
-        <option selected="false"></option>
-        <option selected="{{categoria.moviles}}">Móviles y Tablets</option>
-        <option selected="{{categoria.TV}}">TV</option>
-        <option selected="{{categoria.Portatiles}}">Portátiles</option>
-        <option selected="{{categoria.Ordenadores}}">Ordenadores</option>
-        <option selected="{{categoria.Consolas}}">Consolas</option>
-        <option selected="{{categoria.Audio}}">Audio</option>
-        <option selected="{{categoria.Relojes}}">Relojes Inteligentes</option>
-        <option selected="{{categoria.Otros}}">Otros</option>
-      </select>
-    </div>
-
-    <div>
-      <label class="texto">Descripción del producto:</label>
-      <textarea name="descripcion" placeholder="Inserte la descripción" class="form-control" rows="3">{{descripcion}}</textarea>
-    </div>
-
-    <div>
-      <label class="texto">Servicios incluidos:</label>
-      <textarea name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2">{{servicios}}</textarea>
-    </div>
-
-    <div class="texto">Estado del producto:</div>
 
     
-      <div class="radio-form">
-        <div class="form-check">
+        <button class="buton_agreg" type="submit" value="save">Agregar</button>
+        
+    </form>
+
+    <div class="container_botones"></div>
+    <a href="/">
+      <button class="boton_cancelar" >Cancelar</button>
+    </a>
+    {{/producto}}
+  
+
+    {{#producto.id}}
+    {{#producto}}
+    <form class="row g-3 m-4" action="/producto/edited/{{id}}" method="post">
+      {{#errors}}
+      <div class="alert alert-danger" role="alert">
+        {{msg}}
+      </div>
+      {{/errors}}
+      <div class="col-md-3">
+        <label class="texto" for="nombre">Nombre Producto:</label>
+        <input name="nombre" class="form-control" placeholder="Nombre" value="{{nombre}}">
+      </div>
+
+      <div class="col-md-3 ">
+        <label class="texto" for="nombre-Vendedor">Nombre Vendedor:</label>
+        <input name="vendedor" class="form-control" placeholder="vendedor" value="{{vendedor}}">
+      </div>
+
+      <div class="col-md-3">
+        <label class="texto">Precio:</label>
+        <div class="input-group">
+          <input type="number" min="1" class="form-control" id="precioo" name="precio" placeholder="Introduzca el precio" value="{{precio}}">
+          <span class="input-group-text">
+            <i class="fas fa-euro-sign"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <label class="texto">Categoría:</label>
+        <select name="categoria" class="form-control">
+          <option selected="false"></option>
+          <option selected="{{categoria.moviles}}">Móviles y Tablets</option>
+          <option selected="{{categoria.TV}}">TV</option>
+          <option selected="{{categoria.Portatiles}}">Portátiles</option>
+          <option selected="{{categoria.Ordenadores}}">Ordenadores</option>
+          <option selected="{{categoria.Consolas}}">Consolas</option>
+          <option selected="{{categoria.Audio}}">Audio</option>
+          <option selected="{{categoria.Relojes}}">Relojes Inteligentes</option>
+          <option selected="{{categoria.Otros}}">Otros</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="texto">Descripción del producto:</label>
+        <textarea name="descripcion" placeholder="Inserte la descripción" class="form-control" rows="3">{{descripcion}}</textarea>
+      </div>
+
+      <div>
+        <label class="texto">Servicios incluidos:</label>
+        <textarea name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2">{{servicios}}</textarea>
+      </div>
+
+      <div class="texto">Estado del producto:</div>
+
+      
+        <div class="radio-form">
+          <div class="form-check">
+              <div>
+            <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo" checked="false">Nuevo
+            <label class="form-check-label" for="radio1"></label>
+            </div>
             <div>
-          <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo" checked="false">Nuevo
-          <label class="form-check-label" for="radio1"></label>
+              <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado" checked="false">Reacondicionado
+              <label class="form-check-label" for="radio2"></label>
           </div>
           <div>
-            <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado" checked="false">Reacondicionado
-            <label class="form-check-label" for="radio2"></label>
+              <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" checked="false">Segunda mano
+              <label class="form-check-label" for="radio3"></label>
+          </div>
+          </div>
         </div>
-        <div>
-            <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" checked="false">Segunda mano
-            <label class="form-check-label" for="radio3"></label>
-        </div>
-        </div>
+
+      
+      
+
+
+      <div>
+        <label class="texto" for="upload image">Suba una imagen</label>
+        <input placeholder=" URL" type="url" class="form-control-file" name="imagen1" value="{{imagenprincipal}}">
+        <input placeholder=" URL" type="url" class="form-control-file" name="imagen2" value="{{imagenes.0.imagen}}">
+        <input placeholder=" URL" type="url" class="form-control-file" name="imagen3" value="{{imagenes.1.imagen}}">
       </div>
 
     
-    
+        <button class="buton_agreg" type="submit" value="save">Agregar</button>
+        
+    </form>
+
+    <div class="container_botones"></div>
+    <a href="/">
+      <button class="boton_cancelar" >Cancelar</button>
+    </a>
+    {{/producto}}
+    {{/producto.id}}
+  {{/errores}}
+
+  {{#errores}}
+    {{^producto.id}}
+      {{#producto}}
+      <form class="row g-3 m-4" action="/new/errors" method="post">
+        {{#errors}}
+        <div class="alert alert-danger" role="alert">
+          {{msg}}
+        </div>
+        {{/errors}}
+        <div class="col-md-3">
+          <label class="texto" for="nombre">Nombre Producto:</label>
+          <input name="nombre" class="form-control" placeholder="Nombre" value="{{nombre}}">
+        </div>
+
+        <div class="col-md-3 ">
+          <label class="texto" for="nombre-Vendedor">Nombre Vendedor:</label>
+          <input name="vendedor" class="form-control" placeholder="vendedor" value="{{vendedor}}">
+        </div>
+
+        <div class="col-md-3">
+          <label class="texto">Precio:</label>
+          <div class="input-group">
+            <input type="number" min="1" class="form-control" id="precioo" name="precio" placeholder="Introduzca el precio" value="{{precio}}">
+            <span class="input-group-text">
+              <i class="fas fa-euro-sign"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label class="texto">Categoría:</label>
+          <select name="categoria" class="form-control">
+            <option selected="false"></option>
+            <option selected="{{categoria.moviles}}">Móviles y Tablets</option>
+            <option selected="{{categoria.TV}}">TV</option>
+            <option selected="{{categoria.Portatiles}}">Portátiles</option>
+            <option selected="{{categoria.Ordenadores}}">Ordenadores</option>
+            <option selected="{{categoria.Consolas}}">Consolas</option>
+            <option selected="{{categoria.Audio}}">Audio</option>
+            <option selected="{{categoria.Relojes}}">Relojes Inteligentes</option>
+            <option selected="{{categoria.Otros}}">Otros</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="texto">Descripción del producto:</label>
+          <textarea name="descripcion" placeholder="Inserte la descripción" class="form-control" rows="3">{{descripcion}}</textarea>
+        </div>
+
+        <div>
+          <label class="texto">Servicios incluidos:</label>
+          <textarea name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2">{{servicios}}</textarea>
+        </div>
+
+        <div class="texto">Estado del producto:</div>
+
+        
+          <div class="radio-form">
+            <div class="form-check">
+                <div>
+              <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo" checked="false">Nuevo
+              <label class="form-check-label" for="radio1"></label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado" checked="false">Reacondicionado
+                <label class="form-check-label" for="radio2"></label>
+            </div>
+            <div>
+                <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" checked="false">Segunda mano
+                <label class="form-check-label" for="radio3"></label>
+            </div>
+            </div>
+          </div>
+
+        
+        
 
 
-    <div>
-      <label class="texto" for="upload image">Suba una imagen</label>
-      <input placeholder=" URL" type="url" class="form-control-file" name="imagen1" value="{{imagenprincipal}}">
-      <input placeholder=" URL" type="url" class="form-control-file" name="imagen2" value="{{imagenes.0.imagen}}">
-      <input placeholder=" URL" type="url" class="form-control-file" name="imagen3" value="{{imagenes.1.imagen}}">
-    </div>
+        <div>
+          <label class="texto" for="upload image">Suba una imagen</label>
+          <input placeholder=" URL" type="url" class="form-control-file" name="imagen1" value="{{imagenprincipal}}">
+          <input placeholder=" URL" type="url" class="form-control-file" name="imagen2" value="{{imagenes.0.imagen}}">
+          <input placeholder=" URL" type="url" class="form-control-file" name="imagen3" value="{{imagenes.1.imagen}}">
+        </div>
 
-   
-      <button class="buton_agreg" type="submit" value="save">Agregar</button>
       
-  </form>
+          <button class="buton_agreg" type="submit" value="save">Agregar</button>
+          
+      </form>
 
-  <div class="container_botones"></div>
-  <a href="/">
-    <button class="boton_cancelar" >Cancelar</button>
-  </a>
-  {{/producto}}
+      <div class="container_botones"></div>
+      <a href="/">
+        <button class="boton_cancelar" >Cancelar</button>
+      </a>
+      {{/producto}}
+    {{/producto.id}}
+
+    {{#producto.id}}
+      {{#producto}}
+      <form class="row g-3 m-4" action="/edited/errors/{{id}}" method="post">
+        {{#errors}}
+        <div class="alert alert-danger" role="alert">
+          {{msg}}
+        </div>
+        {{/errors}}
+        <div class="col-md-3">
+          <label class="texto" for="nombre">Nombre Producto:</label>
+          <input name="nombre" class="form-control" placeholder="Nombre" value="{{nombre}}">
+        </div>
+
+        <div class="col-md-3 ">
+          <label class="texto" for="nombre-Vendedor">Nombre Vendedor:</label>
+          <input name="vendedor" class="form-control" placeholder="vendedor" value="{{vendedor}}">
+        </div>
+
+        <div class="col-md-3">
+          <label class="texto">Precio:</label>
+          <div class="input-group">
+            <input type="number" min="1" class="form-control" id="precioo" name="precio" placeholder="Introduzca el precio" value="{{precio}}">
+            <span class="input-group-text">
+              <i class="fas fa-euro-sign"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label class="texto">Categoría:</label>
+          <select name="categoria" class="form-control">
+            <option selected="false"></option>
+            <option selected="{{categoria.moviles}}">Móviles y Tablets</option>
+            <option selected="{{categoria.TV}}">TV</option>
+            <option selected="{{categoria.Portatiles}}">Portátiles</option>
+            <option selected="{{categoria.Ordenadores}}">Ordenadores</option>
+            <option selected="{{categoria.Consolas}}">Consolas</option>
+            <option selected="{{categoria.Audio}}">Audio</option>
+            <option selected="{{categoria.Relojes}}">Relojes Inteligentes</option>
+            <option selected="{{categoria.Otros}}">Otros</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="texto">Descripción del producto:</label>
+          <textarea name="descripcion" placeholder="Inserte la descripción" class="form-control" rows="3">{{descripcion}}</textarea>
+        </div>
+
+        <div>
+          <label class="texto">Servicios incluidos:</label>
+          <textarea name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2">{{servicios}}</textarea>
+        </div>
+
+        <div class="texto">Estado del producto:</div>
+
+        
+          <div class="radio-form">
+            <div class="form-check">
+                <div>
+              <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo" checked="false">Nuevo
+              <label class="form-check-label" for="radio1"></label>
+              </div>
+              <div>
+                <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado" checked="false">Reacondicionado
+                <label class="form-check-label" for="radio2"></label>
+            </div>
+            <div>
+                <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" checked="false">Segunda mano
+                <label class="form-check-label" for="radio3"></label>
+            </div>
+            </div>
+          </div>
+
+        
+        
+
+
+        <div>
+          <label class="texto" for="upload image">Suba una imagen</label>
+          <input placeholder=" URL" type="url" class="form-control-file" name="imagen1" value="{{imagenprincipal}}">
+          <input placeholder=" URL" type="url" class="form-control-file" name="imagen2" value="{{imagenes.0.imagen}}">
+          <input placeholder=" URL" type="url" class="form-control-file" name="imagen3" value="{{imagenes.1.imagen}}">
+        </div>
+
+      
+          <button class="buton_agreg" type="submit" value="save">Agregar</button>
+          
+      </form>
+
+      <div class="container_botones"></div>
+      <a href="/">
+        <button class="boton_cancelar" >Cancelar</button>
+      </a>
+      {{/producto}}
+    {{/producto.id}}
+  {{/errores}}
 </div>
   
 

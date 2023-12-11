@@ -11,7 +11,7 @@ router.get('/paginaDetalle/:id', (req, res) => {
         res.render('error',{errormessage})
     }
     else
-        console.log(productos.getProducto(req.params.id))
+        console.log(productos.get)
         res.render('paginaDetalle', {producto} );
 });
 
