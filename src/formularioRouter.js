@@ -14,6 +14,9 @@ router.post('/producto/new',
 body('vendedor').notEmpty().withMessage('El nombre del vendedor es obligatorio'),
 body('precio').notEmpty().withMessage('El precio es obligatorio'),
 body('categoria').notEmpty().withMessage('La categoría es obligatoria'),
+body('descripcion').notEmpty().withMessage('La descripcion es obligatoria'),
+body('servicios').notEmpty().withMessage('Los servicios son obligatoriaos'),
+body('imagen1').notEmpty().withMessage('Es obligatorio al menos una imagen'),
 // Agrega más reglas de validación según tus necesidades
 ], (req,res) =>{
 const errors = validationResult(req);
@@ -46,34 +49,28 @@ const errors = validationResult(req);
 
 router.post('/paginaDetalle/edit/:id', (req, res) => {
     let producto = productos.getProducto(req.params.id);
-    let categoria = producto.categoria;
-    producto.categoria={moviles:false, TV:false, Portatiles:false, Ordenadores:false, Consolas:false, Audio:false, Relojes:false, Otros:false};
-    switch (categoria){
-        case "Móviles y Tablets":{
-            producto.categoria.moviles=true;
-        };
-        case "TV":{
-            producto.categoria.TV=true;
-        };
-        case "Portatiles":{
-            producto.categoria.Portatiles=true;
-        };
-        case "Ordenadores":{
-            producto.categoria.Ordenadores=true;
-        };
-        case "Consolas":{
-            producto.categoria.Consolas=true;
-        };
-        case "Audio":{
-            producto.categoria.Audio=true;
-        };
-        case "Relojes Inteligentes":{
-            producto.categoria.Relojes=true;
-        };
-        case "Otros":{
-            producto.categoria.Otros=true;
-        };
-    };
+    if (producto.categoria = "Móviles y Tablets")
+        producto.categoria={Moviles:true};
+    else if (producto.categoria = "Portatiles")
+        producto.categoria={Portatiles:true};
+    else if (producto.categoria = "TV")
+        producto.categoria={TV:true};
+    else if (producto.categoria = "Ordenadores")
+        producto.categoria={Ordenadores:true};
+    else if (producto.categoria = "Consolas")
+        producto.categoria={Consolas:true};
+    else if (producto.categoria = "Audio")
+        producto.categoria={Audio:true};
+    else if (producto.categoria = "Relojes")
+        producto.categoria={Relojes:true};
+    else if (producto.categoria = "Otros")
+        producto.categoria={Otros:true};
+    if (producto.estado = 'Nuevo')
+        producto.estado = {Nuevo:true};
+    else if (producto.estado = "Reacondicionado")
+        producto.estado = {Reacondicionado: true};
+    else if (producto.estado = "Segunda mano")
+        producto.estado = {Segunda: true};
     res.render('Formulario', { producto })
 });
 
@@ -91,6 +88,7 @@ router.post('/new/errors',[
   ], (req,res) =>{
     const errors = validationResult(req);
    
+    
 
     let { nombre, precio, vendedor, categoria, descripcion, servicios, estado, imagen1, imagen2, imagen3 } = req.body;
     let id = req.params.id;
