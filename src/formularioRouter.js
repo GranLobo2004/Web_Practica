@@ -12,7 +12,15 @@ router.get('/Formulario', (req, res) => {
 router.post('/producto/new', (req, res) => {
 
     let { nombre, precio, vendedor, categoria, descripcion, servicios, estado, imagen1, imagen2, imagen3 } = req.body;
-    let imagenes = [{ imagen: imagen2 }, { imagen: imagen3 }];
+    let imagenes;
+    if (imagen2 === '')
+        imagenes = [{imagen:imagen3}];
+    if (imagen3 === '')
+        imagenes = [{imagen:imagen2}];
+    if ((imagen2 === '') && (imagen3 === ''))
+        imagenes = [];
+    if ((imagen2 != '') && (imagen3 !=''))
+        imagenes = [{imagen:imagen2},{imagen:imagen3}];
     let comentarios = new Array();
     let imagenprincipal = imagen1;
     let producto = { id:0, nombre, precio, vendedor, categoria, descripcion, servicios, estado, imagenprincipal, imagenes, comentarios };
@@ -56,9 +64,17 @@ router.post('/paginaDetalle/edit/:id', (req, res) => {
 router.post('/producto/edited/:id',(req,res) =>{
     let { nombre, precio, vendedor, categoria, descripcion, servicios, estado, imagen1, imagen2, imagen3 } = req.body;
     let id = req.params.id;
-    console.log(imagen2);
+    let imagenes;
+    if (imagen2 === '')
+        imagenes = [{imagen:imagen3}];
+    if (imagen3 === '')
+        imagenes = [{imagen:imagen2}];
+    if ((imagen2 === '') && (imagen3 === ''))
+        imagenes = [];
+    if ((imagen2 != '') && (imagen3 !=''))
+        imagenes = [{imagen:imagen2},{imagen:imagen3}];
     var num = +id;
-    let producto = {id:num, nombre:nombre, precio:precio, vendedor:vendedor, categoria:categoria, descripcion:descripcion, servicios:servicios, estado:estado, imagenprincipal:imagen1, imagenes:[{imagen:imagen2}, {imagen:imagen3}]};
+    let producto = {id:num, nombre:nombre, precio:precio, vendedor:vendedor, categoria:categoria, descripcion:descripcion, servicios:servicios, estado:estado, imagenprincipal:imagen1, imagenes:imagenes};
     productos.editProducto(producto);
     res.render('paginaDetalle',{producto});
 })
