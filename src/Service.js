@@ -56,6 +56,8 @@ export function addProducto(producto){
 };
 
 export function editProducto(producto){
+    let productoantiguo = mapa.get(producto.id);
+    producto.comentarios= productoantiguo.comentarios;
     mapa.set(producto.id, producto);
 }
 

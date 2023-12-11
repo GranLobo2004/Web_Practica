@@ -150,7 +150,6 @@
     {{/producto}}
   
 
-    {{#producto.id}}
     {{#producto}}
     <form class="row g-3 m-4" action="/producto/edited/{{id}}" method="post">
       {{#errors}}
@@ -301,7 +300,6 @@
       <button class="boton_cancelar" >Cancelar</button>
     </a>
     {{/producto}}
-    {{/producto.id}}
   {{/errores}}
 
   {{#errores}}
@@ -337,54 +335,14 @@
           <label class="texto">Categoría:</label>
           <select name="categoria" class="form-control">
             <option></option>
-            {{#categoria.Moviles}}
-              <option selected>Móviles y Tablets</option>
-            {{/categoria.Moviles}}
-            {{^categoria.Moviles}}
-              <option>Móviles y Tablets</option>
-            {{/categoria.Moviles}}
-            {{#categoria.TV}}
-              <option selected>TV</option>
-            {{/categoria.TV}}
-            {{^categoria.TV}}
-              <option>TV</option>
-            {{/categoria.TV}}
-            {{#categoria.Portatiles}}
-              <option selected>Portatiles</option>
-            {{/categoria.Portatiles}}
-            {{^categoria.Portatiles}}
-              <option>Portatiles</option>
-            {{/categoria.Portatiles}}
-            {{#categoria.Ordenadores}}
-              <option selected>Ordenadores</option>
-            {{/categoria.Ordenadores}}
-            {{^categoria.Ordenadores}}
-              <option>Ordenadores</option>
-            {{/categoria.Ordenadores}}
-            {{#categoria.Consolas}}
-              <option selected>Consolas</option>
-            {{/categoria.Consolas}}
-            {{^categoria.Consolas}}
-              <option>Consolas</option>
-            {{/categoria.Consolas}}
-            {{#categoria.Audio}}
-              <option selected>Audio</option>
-            {{/categoria.Audio}}
-            {{^categoria.Audio}}
-              <option>Audio</option>
-            {{/categoria.Audio}}
-            {{#categoria.Relojes}}
-              <option selected>Relojes Inteligentes</option>
-            {{/categoria.Relojes}}
-            {{^categoria.Relojes}}
-              <option>Relojes Inteligentes</option>
-            {{/categoria.Relojes}}
-            {{#categoria.Otros}}
-              <option selected>Otros</option>
-            {{/categoria.Otros}}
-            {{^categoria.Otros}}
-              <option>Otros</option>
-            {{/categoria.Otros}}
+            <option>Móviles y Tablets</option>
+            <option>TV</option>
+            <option>Portatiles</option>
+            <option>Ordenadores</option>
+            <option>Consolas</option>
+            <option>Audio</option>
+            <option>Relojes Inteligentes</option>
+            <option>Otros</option>
           </select>
         </div>
 
@@ -403,34 +361,16 @@
         
         <div class="radio-form">
           <div class="form-check">
-            {{#estado.Nuevo}}
-            <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo" checked>Nuevo
-            <label class="form-check-label" for="radio1"></label>
-            {{/estado.Nuevo}}
-            {{^estado.Nuevo}}
             <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo">Nuevo
             <label class="form-check-label" for="radio1"></label>
-            {{/estado.Nuevo}}
             </div>
             <div>
-              {{#estado.Reacondicionado}}
-              <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado" checked>Reacondicionado
-              <label class="form-check-label" for="radio2"></label>
-              {{/estado.Reacondicionado}}
-              {{^estado.Reacondicionado}}
               <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado">Reacondicionado
               <label class="form-check-label" for="radio2"></label>
-              {{/estado.Reacondicionado}}
             </div>
             <div>
-              {{#estado.Segunda}}
-              <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" checked="false">Segunda mano
-              <label class="form-check-label" for="radio3"></label>
-              {{/estado.Segunda}}
-              {{^estado.Segunda}}
               <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" >Segunda mano
               <label class="form-check-label" for="radio3"></label>
-              {{/estado.Segunda}}
             </div>
 
         
@@ -488,54 +428,14 @@
           <label class="texto">Categoría:</label>
           <select name="categoria" class="form-control">
             <option></option>
-            {{#categoria.Moviles}}
-              <option selected>Móviles y Tablets</option>
-            {{/categoria.Moviles}}
-            {{^categoria.Moviles}}
-              <option>Móviles y Tablets</option>
-            {{/categoria.Moviles}}
-            {{#categoria.TV}}
-              <option selected>TV</option>
-            {{/categoria.TV}}
-            {{^categoria.TV}}
-              <option>TV</option>
-            {{/categoria.TV}}
-            {{#categoria.Portatiles}}
-              <option selected>Portatiles</option>
-            {{/categoria.Portatiles}}
-            {{^categoria.Portatiles}}
-              <option>Portatiles</option>
-            {{/categoria.Portatiles}}
-            {{#categoria.Ordenadores}}
-              <option selected>Ordenadores</option>
-            {{/categoria.Ordenadores}}
-            {{^categoria.Ordenadores}}
-              <option>Ordenadores</option>
-            {{/categoria.Ordenadores}}
-            {{#categoria.Consolas}}
-              <option selected>Consolas</option>
-            {{/categoria.Consolas}}
-            {{^categoria.Consolas}}
-              <option>Consolas</option>
-            {{/categoria.Consolas}}
-            {{#categoria.Audio}}
-              <option selected>Audio</option>
-            {{/categoria.Audio}}
-            {{^categoria.Audio}}
-              <option>Audio</option>
-            {{/categoria.Audio}}
-            {{#categoria.Relojes}}
-              <option selected>Relojes Inteligentes</option>
-            {{/categoria.Relojes}}
-            {{^categoria.Relojes}}
-              <option>Relojes Inteligentes</option>
-            {{/categoria.Relojes}}
-            {{#categoria.Otros}}
-              <option selected>Otros</option>
-            {{/categoria.Otros}}
-            {{^categoria.Otros}}
-              <option>Otros</option>
-            {{/categoria.Otros}}
+            <option>Móviles y Tablets</option>
+            <option>TV</option>
+            <option>Portatiles</option>
+            <option>Ordenadores</option>
+            <option>Consolas</option>
+            <option>Audio</option>
+            <option>Relojes Inteligentes</option>
+            <option>Otros</option>
           </select>
         </div>
 

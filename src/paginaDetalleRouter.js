@@ -20,12 +20,12 @@ router.post('/new/comentario/:id',(req,res) => {
     let {usuario,texto}= req.body;
     let producto = productos.getProducto(req.params.id);
     productos.addComentario(usuario,texto, producto);
-    res.render('paginaDetalle', {producto});
+    res.redirect(`/paginaDetalle/${req.params.id}`);
 });
 
 router.post('/:id',(req,res) =>{
     productos.deleteProducto(req.params.id);
-    res.render('index',{producto: productos.showProductos()});
+    res.redirect('/index')
 });
 
 
