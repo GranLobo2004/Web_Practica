@@ -11,10 +11,11 @@ router.get('/paginaDetalle/:id', (req, res) => {
         res.render('error',{errormessage})
     }
     else
+        console.log(productos.getProducto(req.params.id))
         res.render('paginaDetalle', {producto} );
 });
 
-router.post('/paginaDetalle/:id',(req,res) => {
+router.post('/new/comentario/:id',(req,res) => {
 
     let {usuario,texto}= req.body;
     let producto = productos.getProducto(req.params.id);

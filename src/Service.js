@@ -56,9 +56,7 @@ export function addProducto(producto){
 };
 
 export function editProducto(producto){
-    console.log(mapa.get(producto.id));
     mapa.set(producto.id, producto);
-    console.log(mapa.get(producto.id));
 }
 
 export function addComentario(usuario, texto, productomod){

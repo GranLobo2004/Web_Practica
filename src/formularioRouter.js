@@ -30,7 +30,6 @@ const errors = validationResult(req);
     let comentarios = new Array();
     let imagenprincipal = imagen1;
     let producto = { id:0, nombre, precio, vendedor, categoria, descripcion, servicios, estado, imagenprincipal, imagenes, comentarios };
-    productos.addProducto(producto);
 
     if (!errors.isEmpty()) {
         // Hay errores de validación, adjunta los mensajes de error al objeto res.locals
@@ -39,7 +38,9 @@ const errors = validationResult(req);
       }
       else{
         res.locals.errors = [];
-        res.render('paginaDetalle', { producto });
+        productos.addProducto(producto);
+        console.log(productos.getProducto(producto.id));
+        res.redirect(`/paginaDetalle/${producto.id}`);
     }
 });
 
@@ -110,7 +111,7 @@ router.post('/producto/edited/:id',[
       }
       else{
         res.locals.errors = [];
-        res.render('paginaDetalle', { producto });
+        res.redirect(`/paginaDetalle/${producto.id}`);
     }
     
 })
