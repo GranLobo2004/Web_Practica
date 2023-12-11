@@ -24,7 +24,7 @@ router.post('/new/comentario/:id',(req,res) => {
 
 router.post('/:id',(req,res) =>{
     productos.deleteProducto(req.params.id);
-    res.redirect('/index')
+    res.redirect('/index');
 });
 
 export default router;
