@@ -67,5 +67,5 @@ export function addComentario(usuario, texto, productomod){
     let anyo = new Date();
     let newcomentario= {usuario:usuario, fecha: {dia:dia.getDate(), mes:mes.getMonth()+1, anyo:anyo.getFullYear()}, texto:texto};
     productomod.comentarios.unshift(newcomentario);
-    mapa.set(productomod.nombre,productomod);
+    mapa.set(productomod.id,productomod);
 };

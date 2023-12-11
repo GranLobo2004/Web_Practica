@@ -11,7 +11,6 @@ router.get('/paginaDetalle/:id', (req, res) => {
         res.render('error',{errormessage})
     }
     else
-        console.log(productos.get)
         res.render('paginaDetalle', {producto} );
 });
 
@@ -27,7 +26,5 @@ router.post('/:id',(req,res) =>{
     productos.deleteProducto(req.params.id);
     res.redirect('/index')
 });
-
-
 
 export default router;
