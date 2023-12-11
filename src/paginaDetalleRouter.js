@@ -3,9 +3,9 @@ import * as productos from './Service.js';
 
 const router = express.Router();
 
-router.get('/paginaDetalle/:nombre', (req, res) => {
+router.get('/paginaDetalle/:id', (req, res) => {
 
-    let producto = productos.getProducto(req.params.nombre);
+    let producto = productos.getProducto(req.params.id);
     if (typeof producto === "undefined"){
         let errormessage = 'El producto que buscas no existe.'
         res.render('error',{errormessage})
@@ -14,16 +14,16 @@ router.get('/paginaDetalle/:nombre', (req, res) => {
         res.render('paginaDetalle', {producto} );
 });
 
-router.post('/paginaDetalle/:nombre',(req,res) => {
+router.post('/paginaDetalle/:id',(req,res) => {
 
     let {usuario,texto}= req.body;
-    let producto = productos.getProducto(req.params.nombre);
+    let producto = productos.getProducto(req.params.id);
     productos.addComentario(usuario,texto, producto);
     res.render('paginaDetalle', {producto});
 });
 
-router.post('/:nombre',(req,res) =>{
-    productos.deleteProducto(req.params.nombre);
+router.post('/:id',(req,res) =>{
+    productos.deleteProducto(req.params.id);
     res.render('index',{producto: productos.showProductos()});
 });
 
