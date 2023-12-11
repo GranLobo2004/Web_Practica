@@ -21,45 +21,11 @@ router.post('/producto/new', (req, res) => {
         imagenes = [{imagen:imagen2},{imagen:imagen3}];
     let comentarios = new Array();
     let imagenprincipal = imagen1;
-    let errormessage = '';
-    
-    if (nombre === '') {
-         errormessage = errormessage +'Rellena el campo de nombre';
-    }
-    else if(vendedor === ''){
-         errormessage = errormessage +' Rellena el campo de vendedor';
-
-    }
-    else if(precio === ''){
-         errormessage = errormessage+' Rellena el campo de precio';
-       
-    }
-    else if(categoria === ''){
-         errormessage = errormessage+' Rellena el campo de categoria';
-       
-    }
-    else if(descripcion === ''){
-         errormessage = errormessage +' Rellena el campo de descripcion';
-     
-    }
-    else if(servicios === ''){
-         errormessage = errormessage +' Rellena el campo de servicios';
-        
-    }
-    else if(!estado){
-         errormessage = errormessage +' Rellena el campo de estado';
-        
-    }
-    else if (errormessage != ''){
-
-        res.render('error',{errormessage})
-    }
-
-    else{
     let producto = { id:0, nombre, precio, vendedor, categoria, descripcion, servicios, estado, imagenprincipal, imagenes, comentarios };
     productos.addProducto(producto);
-    res.render('paginaDetalle', { producto });}
+    res.render('paginaDetalle', { producto });
 });
+
 
 router.post('/paginaDetalle/edit/:id', (req, res) => {
     let producto = productos.getProducto(req.params.id);
