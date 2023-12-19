@@ -1,6 +1,5 @@
 import express from 'express';
 import * as productos from './Service.js';
-import * as ajax from '../public/Index.js';
 
 const router = express.Router();
 

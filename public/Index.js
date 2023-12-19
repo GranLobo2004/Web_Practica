@@ -1,5 +1,6 @@
-export async function loadProductosAjax(){
+async function loadProductosAjax(){
 
+    console.log('checkpoint');
     const response = await fetch('/producto');
 
     const producto = await response.text();
