@@ -1,7 +1,7 @@
 let mapa = new Map();
 let nid = 0;
 let ini = 0;
-let fin = 6;
+let fin;
 export function loadProductos(){
     let producto1 ={id:1,nombre:'Airpods 3ª Generacion',imagenprincipal:'/images/imagesProductos/airpods.png', imagenes:[],precio:160, categoria:'Audio' , descripcion:' Los AirPods Pro 3 ofrecen cancelación activa de ruido para inmersión sonora, modo de transparencia para mayor conciencia ambiental, ajuste personalizado con puntas de silicona, resistencia al agua y sudor (IPX4), sonido envolvente adaptativo con audio espacial, hasta 6 horas de reproducción y estuche de carga inalámbrica para más de 24 horas adicionales.',servicios:'2 años de garantía',estado:'Nuevo', vendedor:'Alexander Pearson', comentarios:new Array()} ;
     let producto2 ={id:2,nombre:'Beats Studio 3', imagenprincipal:'/images/imagesProductos/beats_studio.png', imagenes:[],precio:160, categoria:'Audio',descripcion:' Los Beats Studio 3 ofrecen cancelación adaptativa de ruido para aislamiento total, conectividad inalámbrica Bluetooth clase 1, hasta 22 horas de batería con cancelación de ruido activada, sonido preciso y equilibrado, almohadillas suaves para mayor comodidad, controles multifunción en el auricular, tecnología Fast Fuel para una carga rápida y compatibilidad con Siri para control por voz.',servicios:'3 años de garantía',estado:'Segunda mano ', vendedor:'Alexander Pearson', comentarios:new Array()} ;
@@ -34,19 +34,30 @@ export function loadProductos(){
     mapa.set(producto14.id,producto14);
     mapa.set(producto15.id,producto15);
     nid=15;
+    fin=6;
 };
 
 export function showProductos(){
     let productos = Array.from (mapa.values());
-    let newProductos = productos.slice(ini,fin);
-    for (let contador= fin; contador>ini; contador--){
+    let newProductos = productos.slice(ini,6);
+    for (let contador= 6-1; contador>ini; contador--){
         if (newProductos[contador === null]){
             newProductos.pop();
         }
     };
-    ini+=3;
-    fin+=3;
+    fin=6;
     return newProductos;
+}
+export function showMoreProductos(){
+    fin +=3;
+    let productos = Array.from (mapa.values());
+    let moreProductos = productos.slice(ini,fin);
+    for (let contador= fin-1; contador>ini; contador--){
+        if (moreProductos[contador === null]){
+            moreProductos.pop();
+        }
+    };
+    return moreProductos;
 }
 
 export function getProducto(id){

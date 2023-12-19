@@ -16,6 +16,9 @@ router.get('/index', (req, res) => {
 router.get('/producto',(req,res) => {
     res.render('producto',{producto:productos.showProductos()})
 });
+router.get('/moreproductos',(req,res) => {
+    res.render('producto',{producto:productos.showMoreProductos()})
+});
 
 export default router;
 
