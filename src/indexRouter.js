@@ -20,5 +20,11 @@ router.get('/moreproductos',(req,res) => {
     res.render('producto',{producto:productos.showMoreProductos()})
 });
 
+router.get('/selectproductos',(req,res) => {
+    let terminoBusqueda = req.query.termino || '';
+
+    res.render('producto',{producto:productos.buscarProductos(terminoBusqueda)})
+});
+
 export default router;
 

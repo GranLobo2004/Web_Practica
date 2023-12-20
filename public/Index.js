@@ -21,3 +21,16 @@ async function loadMoreProductosAjax(){
     content.innerHTML = producto;
 
 }
+async function searchProductos(){
+
+    const terminoBusqueda = document.getElementById("buscador").value;
+
+    const response = await fetch(`/selectproductos?termino=${encodeURIComponent(terminoBusqueda)}`);
+
+    const producto = await response.text();
+  
+    const content = document.getElementById("producto");
+
+    content.innerHTML = producto;
+
+}

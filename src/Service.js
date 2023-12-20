@@ -39,13 +39,13 @@ export function loadProductos(){
 
 export function showProductos(){
     let productos = Array.from (mapa.values());
-    let newProductos = productos.slice(ini,6);
-    for (let contador= 6-1; contador>ini; contador--){
+    let newProductos = productos.slice(ini,3);
+    for (let contador= 3-1; contador>ini; contador--){
         if (newProductos[contador === null]){
             newProductos.pop();
         }
     };
-    fin=6;
+    fin=3;
     return newProductos;
 }
 export function showMoreProductos(){
@@ -82,6 +82,19 @@ export function updateProducto(producto){
     mapa.set(producto.id, producto);
     }
 };
+export function buscarProductos(terminoBusqueda) {
+    
+    let resultados = [];
+    console.log(terminoBusqueda);
+
+    for (const producto of mapa.values()) {
+        if (producto.nombre.toLowerCase().includes(terminoBusqueda.toLowerCase())) {
+            resultados.push(producto);
+        }
+    }
+
+    return resultados;
+}
 
 export function addComentario(usuario, texto, productomod){
     let dia = new Date();
