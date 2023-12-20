@@ -68,20 +68,20 @@
       <div class="col-md-3">
         <label class="texto" for="nombre">Nombre Producto:</label>
         {{#producto.nombre}}
-        <input name="nombre" class="form-control" placeholder="Nombre" value="{{producto.nombre}}">
+        <input name="nombre" class="form-control" required pattern="^[A-Z][a-zA-Z0-9\s]*$" title="El nombre debe de empezar por mayúscula" placeholder="Nombre">
         {{/producto.nombre}}
         {{^producto.nombre}}
-        <input name="nombre" class="form-control" placeholder="Nombre">
+        <input name="nombre" class="form-control" required pattern="^[A-Z][a-zA-Z0-9\s]*$" title="El nombre debe de empezar por mayúscula" placeholder="Nombre">
         {{/producto.nombre}}
       </div>
 
       <div class="col-md-3 ">
         <label class="texto" for="nombre-Vendedor">Nombre Vendedor:</label>
         {{#producto.vendedor}}
-        <input name="vendedor" class="form-control" placeholder="vendedor" value="{{producto.vendedor}}">
+        <input name="vendedor" required pattern="^[A-Z][a-zA-Z0-9\s]*$" title="El nombre debe de empezar por mayúscula" class="form-control" placeholder="vendedor" value="{{producto.vendedor}}">
         {{/producto.vendedor}}
         {{^producto.vendedor}}
-        <input name="vendedor" class="form-control" placeholder="vendedor">
+        <input name="vendedor" required pattern="^[A-Z][a-zA-Z0-9\s]*$" title="El nombre debe de empezar por mayúscula" class="form-control" placeholder="vendedor">
         {{/producto.vendedor}}
       </div>
 
@@ -102,7 +102,7 @@
 
       <div class="col-md-3">
         <label class="texto">Categoría:</label>
-        <select name="categoria" class="form-control">
+        <select name="categoria" required class="form-control">
           <option></option>
           {{#producto.categoria}}
             {{#producto.categoria.Moviles}}
@@ -170,20 +170,20 @@
       <div>
         <label class="texto">Descripción del producto:</label>
         {{#producto.descripcion}}
-        <textarea name="descripcion" placeholder="Inserte la descripción" class="form-control" rows="3">{{producto.descripcion}}</textarea>
+        <textarea name="descripcion"  required minlength="50" maxlength="500" placeholder="Inserte la descripción" class="form-control" rows="3">{{producto.descripcion}}</textarea>
         {{/producto.descripcion}}
         {{^producto.descripcion}}
-        <textarea name="descripcion" placeholder="Inserte la descripción" class="form-control" rows="3"></textarea>
+        <textarea name="descripcion"  required minlength="50" maxlength="500" placeholder="Inserte la descripción" class="form-control" rows="3"></textarea>
         {{/producto.descripcion}}
       </div>
 
       <div>
         <label class="texto">Servicios incluidos:</label>
         {{#producto.servicios}}
-        <textarea name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2">{{producto.servicios}}</textarea>
+        <textarea required name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2">{{producto.servicios}}</textarea>
         {{/producto.servicios}}
         {{^producto.servicios}}
-        <textarea name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2"></textarea>
+        <textarea required name="servicios" placeholder="Inserte los servicios" class="form-control" rows="2"></textarea>
         {{/producto.servicios}}
       </div>
 
@@ -191,50 +191,50 @@
 
       
         <div class="radio-form">
-          <div class="form-check">
+          <div class="form-check" >
             {{#producto.estado}}
             <div>
               {{#producto.estado.Nuevo}}
-              <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo" checked>Nuevo
+              <input required type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo" checked>Nuevo
               <label class="form-check-label" for="radio1"></label>
               {{/producto.estado.Nuevo}}
               {{^producto.estado.Nuevo}}
-              <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo">Nuevo
+              <input required type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo">Nuevo
               <label class="form-check-label" for="radio1"></label>
               {{/producto.estado.Nuevo}}
             </div>
             <div>
               {{#producto.estado.Reacondicionado}}
-              <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado" checked>Reacondicionado
+              <input required type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado" checked>Reacondicionado
               <label class="form-check-label" for="radio2"></label>
               {{/producto.estado.Reacondicionado}}
               {{^producto.estado.Reacondicionado}}
-              <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado">Reacondicionado
+              <input required type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado">Reacondicionado
               <label class="form-check-label" for="radio2"></label>
               {{/producto.estado.Reacondicionado}}
             </div>
             <div>
               {{#producto.estado.Segunda}}
-              <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" checked="false">Segunda mano
+              <input required type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" checked="false">Segunda mano
               <label class="form-check-label" for="radio3"></label>
               {{/producto.estado.Segunda}}
               {{^producto.estado.Segunda}}
-              <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" >Segunda mano
+              <input required type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" >Segunda mano
               <label class="form-check-label" for="radio3"></label>
               {{/producto.estado.Segunda}}
             </div>
             {{/producto.estado}}
             {{^producto.estado}}
             <div>
-              <input type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo">Nuevo
+              <input required type="radio" class="form-check-input" id="radio1" name="estado" value="Nuevo">Nuevo
               <label class="form-check-label" for="radio1"></label>
             </div>
             <div>
-              <input type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado">Reacondicionado
+              <input required type="radio" class="form-check-input" id="radio2" name="estado" value="Reacondicionado">Reacondicionado
               <label class="form-check-label" for="radio2"></label>
             </div>
             <div>
-              <input type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" >Segunda mano
+              <input required type="radio" class="form-check-input" id="radio3" name="estado" value="Segunda mano" >Segunda mano
               <label class="form-check-label" for="radio3"></label>
             </div>
             {{/producto.estado}}
