@@ -14,16 +14,52 @@ router.get('/index', (req, res) => {
 });
 
 router.get('/producto',(req,res) => {
-    res.render('producto',{producto:productos.showProductos()})
+    productos.resetProductos();
+    let botonMas;
+    let productosInicio = productos.showProductosInicio();
+    if( productosInicio!= null){
+        botonMas = productos.buttonMasProductos();
+    }
+    else {
+        botonMas=null;
+    }
+    res.render('producto',{producto:productosInicio, botonMas})
 });
 router.get('/moreproductos',(req,res) => {
-    res.render('producto',{producto:productos.showMoreProductos()})
+    let listaproductos = productos.showMoreProductos();
+    let botonMas;
+    botonMas = productos.buttonMasProductos();
+    res.render('producto',{producto:listaproductos,botonMas})
 });
 
 router.get('/selectproductos',(req,res) => {
     let terminoBusqueda = req.query.termino || '';
+    let productosBuscados = productos.buscarProductos(terminoBusqueda);
+    let botonMas;
+    if (productosBuscados != null){
+        botonMas = productos.buttonMasProductos();
+    }
+    else{
+        botonMas = null;
+    }
+    res.render('producto',{producto:productosBuscados, botonMas});
+});
 
-    res.render('producto',{producto:productos.buscarProductos(terminoBusqueda)})
+router.get('/filterProductos',(req,res) => {
+    const estado = req.query.estado;
+    const categoria = req.query.categoria;
+    const preciomin = req.query.preciomin;
+    const preciomax = req.query.preciomax;
+    let botonMas;
+    productos.filtrarProductos(estado,categoria, preciomin, preciomax);
+    let productosFiltrados = productos.showProductosInicio();
+    if (productosFiltrados!= null){
+        botonMas = productos.buttonMasProductos();
+    }
+    else{
+        botonMas=null;
+    }
+    res.render('producto',{producto:productosFiltrados, botonMas});
 });
 
 export default router;

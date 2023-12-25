@@ -5,3 +5,9 @@
     <p class="precio">{{precio}}€</p>
 </div>
 {{/producto}}
+{{^producto}}
+    <p class="mensaje_error">Lamentamos informarle que no disponemos del tipo de productos que anda buscando.</p>
+{{/producto}}
+{{#botonMas}}
+<button type="button" class="boton btn btn-primary btn-md" onclick="loadMoreProductosAjax()">CARGAR MÁS</button>
+{{/botonMas}}

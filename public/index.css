@@ -15,6 +15,22 @@ body{
     justify-content: center;
     text-align: center; 
 }
+.filtro{
+    margin-top:20px;
+    min-width: fit-content;
+    background-color: #0fffe9;
+    margin:0.5%;
+    border-radius: 15px;
+    border-color: white;
+    box-shadow: 5px 5px #000000;
+}
+.mensaje_error{
+    margin-top:100px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
 .col-md-3{
     background-color: #0fffe9;
     margin:1.5%;
@@ -51,6 +67,7 @@ body{
     margin: 10px;
     background-color: #0fffe9;
     color: #000000;
+    max-width: 200px;
 }
 .boton:hover{
     background-color:#03beaf;
