@@ -55,3 +55,17 @@ async function filterProductos(){
     content.innerHTML = producto;
 
 }
+async function toggleCart() {
+    var cartContainer = document.querySelector('.cart-container');
+    cartContainer.classList.toggle('active');
+}
+
+document.addEventListener('click', function(event) {
+    var cartContainer = document.querySelector('.cart-container');
+    var toggleButton = document.querySelector('.toggle-button');
+  
+   
+    if (!event.target.matches('.toggle-button') && !cartContainer.contains(event.target)) {
+      cartContainer.classList.remove('active');
+    }
+});

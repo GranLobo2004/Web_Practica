@@ -141,3 +141,23 @@ a{
     color:#0fffe9;
     border:none;
 } 
+
+.cart-container {
+    position: absolute;
+    top: 0;
+    right: -30%; /* Inicialmente oculto, se mostrará cuando se haga clic en el botón */
+    width: 30%;
+    height: 70vh;
+    background-color: #f0f0f0;
+    overflow-y: auto;
+    transition: right 0.3s ease; /* Agrega una transición suave al mostrar/ocultar */
+  }
+  .cart-container p {
+    padding: 20px;
+    margin: 0;
+  }
+  
+  /* Agrega un estilo al contenedor cuando se muestra */
+  .cart-container.active {
+    right: 0;
+  }
