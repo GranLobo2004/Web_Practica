@@ -34,8 +34,10 @@ router.get('/moreproductos',(req,res) => {
 
 router.get('/selectproductos',(req,res) => {
     let terminoBusqueda = req.query.termino || '';
-
-    res.render('producto',{producto:productos.buscarProductos(terminoBusqueda)})
+    productos.buscarProductos(terminoBusqueda);
+    let productosBuscados = productos.showProductosInicio();
+    let botonMas = productos.buttonMasProductos();
+    res.render('producto',{producto:productosBuscados, botonMas})
 });
 
 

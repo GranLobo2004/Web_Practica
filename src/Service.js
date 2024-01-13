@@ -95,16 +95,14 @@ export function updateProducto(producto){
 export function buscarProductos(terminoBusqueda) {
 
     let resultados = [];
-    console.log(terminoBusqueda);
 
     for (let producto of mapa.values()) {
         if (producto.nombre.toLowerCase().includes(terminoBusqueda.toLowerCase())) {
             resultados.push(producto);
         }
     }
-    console.log(resultados);
 
-    return resultados;
+    productos = resultados;
 }
 
 export function addComentario(usuario, texto, productomod){
@@ -168,10 +166,6 @@ export function filtrarProductos(estado,categoria, preciomin, preciomax){
     productos = productos.filter(function (element){
         return element != undefined;
     });
-    let botonMas = buttonMasProductos(productos);
-    if (botonMas === true){
-        productos.push(botonMas);
-    };
     if (productos.length === 0){
         productos = null;
     }
