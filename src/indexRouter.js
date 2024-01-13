@@ -34,16 +34,10 @@ router.get('/moreproductos',(req,res) => {
 
 router.get('/selectproductos',(req,res) => {
     let terminoBusqueda = req.query.termino || '';
-    let productosBuscados = productos.buscarProductos(terminoBusqueda);
-    let botonMas;
-    if (productosBuscados != null){
-        botonMas = productos.buttonMasProductos();
-    }
-    else{
-        botonMas = null;
-    }
-    res.render('producto',{producto:productosBuscados, botonMas});
+
+    res.render('producto',{producto:productos.buscarProductos(terminoBusqueda)})
 });
+
 
 router.get('/filterProductos',(req,res) => {
     const estado = req.query.estado;

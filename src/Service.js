@@ -93,16 +93,17 @@ export function updateProducto(producto){
     }
 };
 export function buscarProductos(terminoBusqueda) {
-    
-    let resultados = [];
-    productos = Array.from(mapa.values());
 
-    for (const producto of productos) {
+    let resultados = [];
+    console.log(terminoBusqueda);
+
+    for (let producto of mapa.values()) {
         if (producto.nombre.toLowerCase().includes(terminoBusqueda.toLowerCase())) {
             resultados.push(producto);
         }
     }
-    productos=resultados;
+    console.log(resultados);
+
     return resultados;
 }
 

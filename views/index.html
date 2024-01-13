@@ -23,10 +23,11 @@
                     <div class="collapse navbar-collapse" id="navegacion">
                         <ul id="barracentro" class="navbar-nav mx-auto mt-2 mt-lg-0 navegacion ">
                             <!--searchbar-->
-                            <form class="d-flex" role="search">
+                            <form class="d-flex" role="search" onsubmit="searchProductos(event)">
                                 <input class="form-control" id="buscador" type="search" placeholder="¿Que tienes en mente...?" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit" onclick="searchProductos()">Search</button>
+                                <button class="btn btn-outline-success" type="submit" >Search</button>
                             </form>
+
                             <!--searchbar end-->
                             <li class="nav-item">
                                 <a style="font-size: 20px;" class="nav-link" href="#"><i class="bi bi-person nav-icon"></i></a>
