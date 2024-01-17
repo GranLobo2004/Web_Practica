@@ -1,4 +1,5 @@
 let mapa = new Map();
+let compra = [];
 let nid = 0;
 let ini = 0;
 let fin;
@@ -113,6 +114,13 @@ export function addComentario(usuario, texto, productomod){
     productomod.comentarios.unshift(newcomentario);
     mapa.set(productomod.id,productomod);
 };
+export function AddCompra(producto){
+    compra.unshift(producto);
+    return compra;
+}
+export function GetCarrito(){
+    return compra;
+}
 
 export function filtrarProductos(estado,categoria, preciomin, preciomax){
     productos = Array.from(mapa.values());
@@ -169,4 +177,6 @@ export function filtrarProductos(estado,categoria, preciomin, preciomax){
     if (productos.length === 0){
         productos = null;
     }
+
+
 };

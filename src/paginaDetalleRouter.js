@@ -15,7 +15,6 @@ router.get('/paginaDetalle/:id', (req, res) => {
 });
 
 router.post('/new/comentario/:id',(req,res) => {
-
     let {usuario,texto}= req.body;
     let producto = productos.getProducto(req.params.id);
     productos.addComentario(usuario,texto, producto);
@@ -25,6 +24,19 @@ router.post('/new/comentario/:id',(req,res) => {
 router.post('/:id',(req,res) =>{
     productos.deleteProducto(req.params.id);
     res.redirect('/index');
+});
+
+router.get('/addtocart/:productId',(req,res) => {
+    
+    let producto = productos.getProducto(req.params.productId);
+    productos.AddCompra(producto);
+    let cestacompra = productos.GetCarrito();
+    res.render('productoCompra',{producto:cestacompra})
+});
+router.get('/showcart',(req,res) => {
+    let cestacompra = productos.GetCarrito();
+    console.log("CARRITO",cestacompra);
+    res.render('productoCompra',{producto:cestacompra})
 });
 
 export default router;

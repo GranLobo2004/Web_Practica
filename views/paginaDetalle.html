@@ -5,6 +5,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/paginaDetalle.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="./Index.js"></script>
 </head>
 <body>
     <!--navbar top-->
@@ -105,8 +106,7 @@
                         <div class="conteiner">
                             <div class="row">
                                 <div class="col-md-auto">
-                                    <button id="cesta" type="button"
-                                        class="btn btn-primary btn-lg btn-block">Comprar</button>
+                                    <button data-product-id="{{id}}" id="cesta" type="button submit" class="btn btn-primary btn-lg btn-block" onclick="agregarAlCarrito('{{id}}')">Comprar</button>
                                 </div>
                                 <div class="col">
                                     <button type="button" class="btn btn-primary btn-lg btn-block"><i

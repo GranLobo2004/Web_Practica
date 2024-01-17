@@ -1,3 +1,4 @@
+
 async function loadProductosAjax(){
 
     const response = await fetch('/producto');
@@ -58,14 +59,33 @@ async function filterProductos(){
 async function toggleCart() {
     var cartContainer = document.querySelector('.cart-container');
     cartContainer.classList.toggle('active');
+
 }
 
 document.addEventListener('click', function(event) {
     var cartContainer = document.querySelector('.cart-container');
     var toggleButton = document.querySelector('.toggle-button');
-  
    
     if (!event.target.matches('.toggle-button') && !cartContainer.contains(event.target)) {
       cartContainer.classList.remove('active');
     }
-});
+})
+
+async function agregarAlCarrito(productId) {
+    
+    console.log(productId);
+
+    await fetch(`/addtocart/${productId}`);
+
+}
+
+async function mostrarCarrito() {
+
+    const response = await fetch(`/showcart`);
+
+    const producto = await response.text();
+  
+    const content = document.getElementById("compra");
+
+    content.innerHTML = producto;
+}
